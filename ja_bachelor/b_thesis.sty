@@ -1,0 +1,328 @@
+% b_thesis.sty 21-Jan-2005 revised by Kentaro ISHII kenta@ayu.ics.keio.ac.jp
+%  based on
+%   keiothesis.sty 28-Jan-89 by Hiroaki FUSE fuse@Chapel.keio.junet
+
+% Modified by Takashi Yoshino on 15th Jan.1993
+% ここから
+
+\def\tableofcontents{\@restonecolfalse\if@twocolumn\@restonecoltrue\onecolumn
+ \fi\chapter*{目 次\@mkboth{}{目 次}}
+ \@starttoc{toc}\if@restonecol\twocolumn\fi}
+\def\l@part#1#2{\addpenalty{-\@highpenalty}
+ \addvspace{2.25em plus 1pt} \begingroup
+ \@tempdima 3em \parindent \z@ \rightskip \@pnumwidth \parfillskip
+-\@pnumwidth
+ {\large \bf \leavevmode #1\hfil \hbox to\@pnumwidth{\hss #2}}\par
+ \nobreak \endgroup}
+
+\def\l@chapter#1#2{
+    \vskip 1.0em plus 1pt \@tempdima 1.5em
+    \begingroup
+    \leftskip 0em\relax \rightskip \@tocrmarg \parfillskip -\rightskip
+    \parindent 0em\relax\@afterindenttrue
+    \interlinepenalty\@M
+    \leavevmode
+    \@lnumwidth 1.5em\relax
+    \advance\leftskip \@lnumwidth \hbox{}\hskip -\leftskip
+    \bf {#1}
+    \hfill \nobreak\hbox to\@pnumwidth{%
+    \hss\reset@font\rmfamily \normalcolor \bf #2}\par
+  \endgroup}
+\def\l@section{\@dottedtocline{1}{1.5em}{2.3em}}
+\def\l@subsection{\@dottedtocline{2}{3.8em}{3.2em}}
+\def\l@subsubsection{\@dottedtocline{3}{7.0em}{4.1em}}
+\def\l@paragraph{\@dottedtocline{4}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{5}{12em}{6em}}
+\def\listoffigures{\@restonecolfalse\if@twocolumn\@restonecoltrue\onecolumn
+ \fi\chapter*{図 目 次\@mkboth
+ {}{図 目 次}}\@starttoc{lof}\if@restonecol\twocolumn
+ \fi}
+\def\l@figure{\@dottedtocline{1}{1.5em}{2.3em}}
+\def\listoftables{\@restonecolfalse\if@twocolumn\@restonecoltrue\onecolumn
+ \fi\chapter*{表 目 次\@mkboth
+ {}{表 目 次}}\@starttoc{lot}\if@restonecol
+ \twocolumn\fi}
+\let\l@table\l@figure
+
+
+\def\thebibliography#1{\chapter*{参考文献\@mkboth
+ {}{参 考 文 献}}\list
+ {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
+ \advance\leftmargin\labelsep
+ \usecounter{enumi}}
+ \def\newblock{\hskip .11em plus .33em minus .07em}
+ \sloppy
+ \sfcode`\.=1000\relax}
+\let\endthebibliography=\endlist
+
+
+\newif\if@restonecol
+\def\theindex{\@restonecoltrue\if@twocolumn\@restonecolfalse\fi
+\columnseprule \z@
+\columnsep 35pt\twocolumn[\@makeschapterhead{索 引}]
+ \@mkboth{}{索 引}\thispagestyle{plain}\parindent\z@
+ \parskip\z@ plus .3pt\relax\let\item\@idxitem}
+\def\@idxitem{\par\hangindent 40pt}
+\def\subitem{\par\hangindent 40pt \hspace*{20pt}}
+\def\subsubitem{\par\hangindent 40pt \hspace*{30pt}}
+\def\endtheindex{\if@restonecol\onecolumn\else\clearpage\fi}
+\def\indexspace{\par \vskip 10pt plus 5pt minus 3pt\relax}
+
+
+% ここまで
+
+
+\def\@chapapp{第\thechapter 章}  %  第\thechapter 章
+
+\def\abstract{\if@twocolumn
+\section*{概要}
+\else \small
+\begin{center}
+{\bf 概要\vspace{-.5em}\vspace{0pt}}
+\end{center}
+\quotation
+\fi}
+
+
+\def\@makechapterhead#1{ \vspace*{30pt} { \parindent 0pt \raggedright
+ \ifnum \c@secnumdepth >\m@ne \huge\bf \@chapapp{} \par
+ \vskip 20pt \fi \Huge \bf #1\par
+ \nobreak \vskip 40pt } }
+
+\def\@makeschapterhead#1{ \vspace*{30pt} { \parindent 0pt \raggedright
+ \Huge \bf #1\par
+ \nobreak \vskip 40pt } }
+\def\chapter{\clearpage \thispagestyle{plain} \global\@topnum\z@
+\@afterindenttrue \secdef\@chapter\@schapter}
+\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+ \refstepcounter{chapter}
+ \typeout{\@chapapp}
+ \addcontentsline{toc}{chapter}{\protect
+ \numberline{\thechapter}#1}\else
+ \addcontentsline{toc}{chapter}{#1}\fi
+ \chaptermark{#1}
+ \addtocontents{lof}{\protect\addvspace{10pt}}
+\addtocontents{lot}{\protect\addvspace{10pt}} \if@twocolumn
+\@topnewpage[\@makechapterhead{#2}]
+ \else \@makechapterhead{#2}
+ \@afterheading \fi}
+\def\@schapter#1{\if@twocolumn \@topnewpage[\@makeschapterhead{#1
+}]
+ \else \@makeschapterhead{#1}
+ \@afterheading\fi}
+
+
+
+\iffalse
+\def\@makechapterhead#1{ \vspace*{150pt} { \parindent 0pt \raggedright
+ \ifnum \c@secnumdepth >\m@ne \centerline{\Large\gt\bf \@chapapp} \par
+\vskip 40pt \fi \centerline{\Large \gt\bf #1} \par \nobreak \vskip
+40pt }\clearpage }
+
+\def\@makeschapterhead#1{ \vspace*{10pt} { \parindent 0pt \raggedright
+ \Large \gt\bf #1\par \nobreak \vskip 40pt } }
+
+\def\chapter{ \clearpage \thispagestyle{plain}  \global\@topnum\z@
+\@afterindentfalse \secdef\@chapter\@schapter}
+
+\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+ \refstepcounter{chapter} \typeout{\@chapapp}
+\addcontentsline{toc}{chapter}{\protect
+\numberline{\thechapter}#1}\else \addcontentsline{toc}{chapter}{#1}\fi
+\chaptermark{#1} \addtocontents{lof}{\protect\addvspace{10pt}}
+\addtocontents{lot}{\protect\addvspace{10pt}} \if@twocolumn
+\@topnewpage[\@makechapterhead{#2}]
+ \else \@makechapterhead{#2} \@afterheading \fi}
+\def\@schapter#1{\if@twocolumn \@topnewpage[\@makeschapterhead{#1}]
+ \else \@makeschapterhead{#1} \@afterheading\fi}
+\fi
+
+% \font\logofont=kiis10 scaled \magstep2
+
+\makeatletter
+\def\ps@headings{\let\@mkboth\markboth
+%\def\@oddhead{$\underline{\makebox[\textwidth]{{\logofont o}
+%\hspace*{15pt}{\sf\leftmark}\hfill{\sf\rightmark}}}$}
+\def\@oddhead{$\underline{\makebox[\textwidth]{{\sl\leftmark}\hfill{\sl\rightmark}}}$}
+\def\@oddfoot{\rm\hfil\thepage\hfil}
+\def\@evenhead{$\underline{\makebox[\textwidth]{{\sl\leftmark}\hfill{\sl\rightmark}}}$}
+\def\@evenfoot{\rm\hfil\thepage\hfil}
+\def\chaptermark##1{\markboth{\ifnum\c@secnumdepth >\m@ne\thechapter.\ \fi ##1}{}}
+\def\sectionmark##1{\markright{\ifnum\c@secnumdepth >\z@\thesection.\ \fi ##1}}}
+
+\newif\if西暦\let\if西暦=\iffalse \def\西暦{\let\if西暦=\iftrue}
+\def\thisyear{{\if西暦\count0=\year\else%
+\count0=\year\advance\count0 -2019 令和\,\fi%
+\ifnum\count0=1 2\else\number\count0\fi\,年度}}
+
+
+\def\id#1{\gdef\@id{#1}}
+\def\teachera#1{\gdef\@teachera{#1}}
+\def\teacherb#1{\gdef\@teacherb{#1}}
+\def\teacherc#1{\gdef\@teacherc{#1}}
+\def\course#1{\gdef\@course{#1}}
+%
+%
+\def\authorname#1{\gdef\@authorname{#1}}
+%
+%
+
+\def\maketitle{\begin{titlepage}
+\let\footnoterule\relax \thispagestyle{empty} \setcounter{page}{0}
+\null
+\vfil
+\begin{center}
+\vskip -0.8cm
+\underline{\LARGE 卒　業　論　文} \vskip 2cm
+\leftline{\hspace*{1.0cm} \underline{題　　目}} \vskip 0.5cm
+{\LARGE \bf \gt \@title }\par \vskip 2cm 
+
+\leftline{\hspace*{1.0cm} \underline{指導教授}} \vskip -0.6cm  %\vskip 2.5cm
+{ \LARGE \@teachera} \vskip 0.5cm
+\leftline{\hspace*{1.0cm} } \vskip -0.6cm  %\vskip 2.5cm
+{ \LARGE \@teacherb}
+\leftline{\hspace*{1.0cm} } \vskip -0.6cm  %\vskip 2.5cm
+{ \LARGE \@teacherc}
+
+ \vskip 5.0cm
+{ \LARGE \thisyear} \vskip 2.5cm
+{ \LARGE 慶應義塾大学　理工学部　情報工学科} \vskip  1.0cm
+{ \Huge {\@authorname　} \LARGE (\@id)}
+\end{center} \par
+\@thanks
+\vfil
+\null
+\end{titlepage}
+\setcounter{footnote}{0} \let\thanks\relax
+\let\maketitle\relax \pagebreak }
+
+
+\long\def\jabst#1{\long\gdef\@jabst{#1}}
+\long\def\jabstfoot#1{\long\gdef\@jabstfoot{#1}}
+
+\def\makejabstract{\titlepage
+{\oddsidemargin=0truecm
+\evensidemargin=0truecm
+\topmargin=0truecm
+\textwidth=22truecm
+\textheight=25truecm
+\baselineskip=6mm
+\setlength{\unitlength}{1mm}
+%\thispagestyle{empty}
+\begin{center}
+%\begin{picture}(180,250)(0,-30) %% Original
+\begin{picture}(150,220)(5,0)
+\LARGE
+\put(87,223){\makebox(0,0){論 文 要 旨}}
+\normalsize
+\put(87,-8){\makebox(0,0){慶応義塾大学理工学部}}
+\normalsize
+\put(12.5,209){\makebox(0,0){学科}}
+\put(57.5,209){\makebox(0,0){学籍番号}}
+\put(117.5,209){\makebox(0,0){氏名}}
+\put(8,201){\makebox(0,0)[tl]{(論文題目)}}
+\put(5,0){\framebox(160,215){}}
+\put(5,183){\line(1,0){160}}
+\put(5,203){\line(1,0){160}}
+\put(45,203){\line(0,1){12}}
+\put(110,203){\line(0,1){12}}
+\put(20,203){\dashbox(0,12){}}
+\put(70,203){\dashbox(0,12){}}
+\put(125,203){\dashbox(0,12){}}
+%
+\large
+\put(32.5,209){\makebox(0,0){\gt \@course }}
+\put(90,209){\makebox(0,0){\Large \bf \@id }}
+\put(145,209){\makebox(0,0){\Large \gt \@author }}
+\Large
+\put(88,192){\makebox(0,0){\gt \bf \shortstack{ \@title } }}
+%
+\large
+\put(84,180){\makebox(0,0)[t]{
+\begin{tabular}{p{140mm}}
+\renewcommand{\baselinestretch}{2.2}
+
+\@jabst
+
+%\hspace{1.5em}
+\end{tabular}}}
+%\put(10,20){\line(1,0){150}}
+%\normalsize
+%\put(84,10){\makebox(0,0)[b]{
+%\begin{tabular}{p{140mm}}
+
+%\@jabstfoot
+
+%\end{tabular}}}
+\end{picture}
+\end{center} %\pagebreak
+ }
+\newpage
+\setcounter{page}{1}
+}
+
+\long\def\abst#1{\long\gdef\@abst{#1}}
+%\def\abstfoot#1{\gdef\@abstfoot{#1}}
+\def\courseinenglish#1{\gdef\@courseinenglish{#1}}
+\def\authorinenglish#1{\gdef\@authorinenglish{#1}}
+\def\titleinenglish#1{\gdef\@titleinenglish{#1}}
+
+\def\makeabstract{\titlepage
+{\oddsidemargin=0truecm
+\evensidemargin=0truecm
+\topmargin=0truecm
+\textwidth=18truecm
+\textheight=25truecm
+\baselineskip=6mm
+\setlength{\unitlength}{1mm}
+\thispagestyle{empty}
+
+\begin{center}
+\begin{picture}(180,250)(0,-30)
+\LARGE
+\put(87,223){\makebox(0,0){Summary}}
+\small
+%\put(87,-8){\makebox(0,0){Faculty of Science and Technology KEIO UNIVERSITY}}
+\put(87,-8){\makebox(0,0){Information and Computer Science KEIO UNIVERSITY}}
+\normalsize
+\put(37.5,211){\makebox(0,0){Course}}
+\put(87.5,211){\makebox(0,0){Student No.}}
+\put(135,211){\makebox(0,0){SURNAME, Firstname}}
+\put(8,196){\makebox(0,0)[tl]{Title}}
+\put(5,0){\framebox(160,215){}}
+\put(5,178){\line(1,0){160}}
+\put(5,198){\line(1,0){160}}
+\put(70,198){\line(0,1){17}}
+\put(105,198){\line(0,1){17}}
+\put(5,208){\dashbox(160,0){}}
+%
+\large
+\put(37.5,202){\makebox(0,0){\@courseinenglish }}
+\put(87.5,202){\makebox(0,0){\@id }}
+\put(135,202){\makebox(0,0){\@authorinenglish }}
+\Large
+\put(88,187){\makebox(0,0){\bf \shortstack{ \@titleinenglish }}}
+%
+\large
+\put(84,170){\makebox(0,0)[t]{
+	\begin{tabular}{p{140mm}}
+\renewcommand{\baselinestretch}{2.2}
+
+\@abst
+
+\hspace{1.5em}
+\end{tabular}}}
+%\put(10,20){\line(1,0){150}}
+%\normalsize
+%\put(84,10){\makebox(0,0)[b]{
+%	\begin{tabular}{p{140mm}} 
+
+%\@abstfoot
+
+%\end{tabular}}}
+\end{picture}
+\end{center} \pagebreak }}
+
+\def\fnum@figure{図 \thefigure}
+
+\def\fnum@table{表 \thetable}

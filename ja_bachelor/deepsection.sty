@@ -1,0 +1,80 @@
+% From: fordyce@amsaa-cleo.brl.mil (David F. Fordyce)
+% Newsgroups: comp.text.tex
+% Subject: Sectioning in LaTeX
+% Message-ID: <8865@amsaa-cleo.brl.mil>
+% Date: 3 Sep 92 14:55:08 GMT
+
+% 		I ran into a similar problem when doing my thesis. Posted 
+% below is my solution. However, it does not put the deeper sectioning levels
+% in the table of contents (i don't think you really want a 5 level table of
+% contents anyway :-). Hope this helps,
+
+%
+%  deepsection.tex
+%
+% \documentstyle[12pt]{article}
+%
+% Fancy preamble to define the "." to appear in the section numbering title.
+% Also defines 2 additional levels of sectioning: \subsubsubsection and
+% \subsubsubsubsection. All levels of sectioning are \normalsize except the
+% first -- it is \Large.  ... df (3/23/92)
+
+\setcounter{secnumdepth}{6}
+\newcounter {subsubsubsection}[subsubsection]
+\newcounter {subsubsubsubsection}[subsubsubsection]
+% \makeatletter
+\def\@sect#1#2#3#4#5#6[#7]#8{\ifnum #2>\c@secnumdepth
+     \def\@svsec{}\else 
+     \refstepcounter{#1}\edef\@svsec{\csname the#1\endcsname .\hskip 1em }\fi
+     \@tempskipa #5\relax
+      \ifdim \@tempskipa>\z@ 
+        \begingroup #6\relax
+          \@hangfrom{\hskip #3\relax\@svsec}{\interlinepenalty \@M #8\par}
+        \endgroup
+       \csname #1mark\endcsname{#7}\addcontentsline
+         {toc}{#1}{\ifnum #2>\c@secnumdepth \else
+                      \protect\numberline{\csname the#1\endcsname}\fi
+                    #7}\else
+        \def\@svsechd{#6\hskip #3\@svsec #8\csname #1mark\endcsname
+                      {#7}\addcontentsline
+                           {toc}{#1}{\ifnum #2>\c@secnumdepth \else
+                             \protect\numberline{\csname the#1\endcsname}\fi
+                       #7}}\fi
+    \@xsect{#5}}
+\def\section{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus 
+ -.2ex}{2.3ex plus .2ex}{\Large\bf}}
+\def\subsection{\@startsection{subsection}{2}{\z@}{-3.25ex plus -1ex minus 
+ -.2ex}{1.5ex plus .2ex}{\normalsize\bf}}
+\def\subsubsection{\@startsection{subsubsection}{3}{\z@}{-3.25ex plus
+ -1ex minus -.2ex}{1.5ex plus .2ex}{\normalsize\bf}}
+\def\subsubsubsection{\@startsection{subsubsubsection}{4}{\z@}{-3.25ex plus
+ -1ex minus -.2ex}{1.5ex plus .2ex}{\normalsize\bf}}
+\def\subsubsubsubsection{\@startsection{subsubsubsubsection}{5}{\z@}{-3.25ex plus
+ -1ex minus -.2ex}{1.5ex plus .2ex}{\normalsize\bf}}
+\def\subsubsubsectionmark#1{}
+\def\subsubsubsubsectionmark#1{}
+\def\thesubsubsubsection {\thesubsubsection .\arabic{subsubsubsection}}
+\def\thesubsubsubsubsection {\thesubsubsubsection .\arabic{subsubsubsubsection}}
+% \makeatother
+
+% \begin{document}
+% \setcounter{section}{5}
+% \setcounter{subsection}{3}
+%
+% \subsection{Stuff.}
+% 
+% \subsubsection{More stuff.}
+% 
+% Text text text :\\
+% 
+% \subsubsubsection{Even more stuff.} 
+% 
+% text text text. \\
+% 
+% \subsubsubsection{Even more stuff.}
+% 
+% text text text. 
+% \subsubsubsubsection{4 - Deep}
+% 
+% This is 4 deep stuff
+% \end{document}

@@ -1,0 +1,140 @@
+\chapter{モデル図示ツール}
+前章において作成したモデルを図示するツールについて本章では説明する.
+このツールにより作成した誘導経路における人の立ち位置を予測し,経路の修正を行うことが出来る.
+以下ではその具体例を示す.
+
+\section{モデルAの例}
+図\ref{modelApic}のような環境において,ついたてに貼った写真を見せるよう人を誘導することを考える.
+以下に適切でない誘導例とそれをモデル図示ツールにより修正する様子を示す.
+
+\begin{comment}
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{modelApic.eps}
+\caption{モデルA検証環境}
+\label{modelApic}
+\end{center}
+\end{figure}
+\end{comment}
+
+\subsection{適切でない誘導}
+図\ref{modelAfkiseki}のような軌跡で全方位台車が動き,人を誘導する場合を考える.
+水色の線が誘導対象のついたて,紫色は障害物のついたてを表している.
+このような軌跡の場合,人は右後方から追随して全方位台車の停止とともに立ち止まることが予測されるので,
+モデルAを適用する.
+この軌跡の場合のモデルAを図示すると図\ref{modelAf}のようになる.
+赤い四角は全方位台車(二重線の辺が正面),青の線は人の位置,
+黒の線は人の視野をそれぞれ表している.
+このように障害物のついたてが邪魔になり,適切な誘導とは言えない.
+
+\begin{comment}
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{modelAfkiseki.eps}
+\caption{モデルAにおける適切でない誘導の軌跡}
+\label{modelAfkiseki}
+\end{center}
+ \end{minipage}
+ \begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{modelAf.eps}
+\caption{モデルAの図示(適切でない例)}
+\label{modelAf}
+\end{center}
+ \end{minipage}
+\end{figure}
+\end{comment}
+
+\subsection{修正例}
+モデルAの立ち位置とついたての位置を鑑みると,全方位台車の向きを少し右にして位置は左へ移動させると
+適切な誘導が出来ることがわかる.
+そのように改善した軌跡を図\ref{modelAskiseki}に示す.
+この場合のモデルAを図示すると図\ref{modelAs}のようになり,適切な誘導が出来ていることが確認できる.
+
+
+
+\begin{comment}
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{modelAskiseki.eps}
+\caption{モデルAにおける適切な誘導の軌跡}
+\label{modelAskiseki}
+\end{center}
+ \end{minipage}
+ \begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{modelAs.eps}
+\caption{モデルAの図示(適切な例)}
+\label{modelAs}
+\end{center}
+ \end{minipage}
+\end{figure}
+\end{comment}
+
+\section{モデルCの例}
+図\ref{modelCpic}のような環境において,ダンボール上の積み木を見せるよう人を誘導することを考える.
+以下に適切でない誘導例とそれをモデル図示ツールにより修正する様子を示す.
+
+\begin{comment}
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{modelCpic.eps}
+\caption{モデルC検証環境}
+\label{modelCpic}
+\end{center}
+\end{figure}
+\end{comment}
+
+\subsection{適切でない誘導}
+図\ref{modelCfkiseki}のような軌跡で全方位台車が動き,人を誘導する場合を考える.
+このような軌跡の場合,人は右後方から追随して誘導対象のそばで立ち止まることが予測されるので,
+モデルCを適用する.
+この軌跡の場合のモデルCを図示すると図\ref{modelCf}のようになる.
+このように障害物のついたてが邪魔になり,適切な誘導とは言えない.
+
+\begin{comment}
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{modelCfkiseki.eps}
+\caption{モデルCにおける適切でない誘導の軌跡}
+\label{modelCfkiseki}
+\end{center}
+ \end{minipage}
+ \begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{modelCf.eps}
+\caption{モデルCの図示(適切でない例)}
+\label{modelCf}
+\end{center}
+ \end{minipage}
+\end{figure}
+\end{comment}
+
+\subsection{修正例}
+モデルCの立ち位置とついたての位置を鑑みると,全方位台車をダンボールの上の辺へ回り込ませると
+適切な誘導が出来ることがわかる.
+そのように改善した軌跡を図\ref{modelCskiseki}に示す.
+この場合のモデルCを図示すると図\ref{modelCs}のようになり,適切な誘導が出来ていることが確認できる.
+
+
+\begin{comment}
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{modelCskiseki.eps}
+\caption{モデルCにおける適切な誘導の軌跡}
+\label{modelCskiseki}
+\end{center}
+ \end{minipage}
+ \begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{modelCs.eps}
+\caption{モデルCの図示(適切な例)}
+\label{modelCs}
+\end{center}
+ \end{minipage}
+\end{figure}
+\end{comment}

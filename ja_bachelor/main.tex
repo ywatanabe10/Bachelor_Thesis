@@ -1,0 +1,87 @@
+%
+%     卒業論文 (2004. 1)
+%                         Authorized by Jun MUKAI
+%
+\documentclass[12pt]{jreport}
+\usepackage{b_thesis}
+\usepackage{ascmac}
+\usepackage{deepsection}
+\usepackage{drafts}
+\usepackage[dvipdfmx]{graphicx, color}
+\usepackage{here}
+\usepackage{tabverb}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{moreverb}
+\usepackage{fancybox}
+\usepackage{comment}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{indentfirst}
+
+\pagestyle{headings}
+%\pagestyle{drafts}
+
+\topmargin=0.0truecm
+\oddsidemargin=0.1truecm
+\evensidemargin=0.1truecm
+\textwidth=16cm
+\textheight=22.5cm
+\newcommand{\figurewidth}{14cm}
+
+\title{全方位台車を用いた
+\\ユーザーの位置・向き 誘導モデルの提案}
+
+\author{小池　京太郎}                   % あなたのお名前
+\teachera{今井 倫太 准教授}
+\teacherb{}
+\teacherc{}
+\authorname{小池　京太郎}               % あなたのお名前
+\date{}
+
+\course{情報工学}
+\id{60808076}                       % あなたの学籍番号
+
+\begin{document}
+\baselineskip = 20pt
+\bibliographystyle{my_jalpha}
+\nocite{*}
+\maketitle                  %表紙がいらないときはコメントアウト
+
+\include{abstract}     %論文要旨
+\newpage
+
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+\tableofcontents     %目次    
+\listoffigures       %図目次
+\listoftables        %表目次
+\newpage
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\baselineskip = 20pt
+
+
+%% 
+%% 論文構成．ここは適宜変更する
+%% 
+\include{introduction}
+\include{background}
+\include{proposal}
+% \include{design}
+\include{implement}
+\include{robotexample}
+\include{test}
+\include{evaluation}
+\include{conclusion}
+%%
+%%
+
+\include{thanks}    %謝辞
+
+\bibliography{reference}     %参考文献
+
+\end{document}

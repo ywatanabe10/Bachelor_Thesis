@@ -1,0 +1,62 @@
+%
+%     卒業論文 (2004. 1)
+%                         Authorized by MUKAI,Jun
+%
+\documentclass[12pt]{b_thesis}
+\usepackage{ascmac}
+\usepackage{deepsection}
+\usepackage{drafts}
+\usepackage{graphicx}
+\usepackage{here}
+\usepackage{tabverb}
+
+\pagestyle{drafts}
+
+\topmargin=0.0truecm
+\oddsidemargin=0.1truecm
+\evensidemargin=0.1truecm
+\textwidth=16cm
+\textheight=22.5cm
+\newcommand{\figurewidth}{14cm}
+
+\setcounter{chapter}{0}
+
+\title{タイトル}
+
+\author{小池　京太郎}                   % あなたのお名前
+\teachera{今井 倫太 准教授}
+\teacherb{}
+\teacherc{}
+\authorname{小池　京太郎}               % あなたのお名前
+\date{}
+
+\course{情報工学}
+\id{60808076}                       % あなたの学籍番号
+
+\begin{document}
+\baselineskip = 25pt
+\bibliographystyle{my_jalpha}
+% \nocite{*}
+% \maketitle                  %表紙がいらないときはコメントアウト
+
+% \include{introduction}     %論文要旨
+% \newpage
+
+% \setcounter{page}{1}
+% \pagenumbering{roman}
+
+% \tableofcontents     %目次    
+% \listoffigures       %図目次
+% \listoftables        %表目次
+% \newpage
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\baselineskip = 25pt
+
+\include{introduction}
+
+\bibliography{reference}     %参考文献
+
+\end{document}

@@ -1,0 +1,264 @@
+\chapter{実験}
+本稿ではモデル作成のための実験を行った.
+本章では実験準備,実験内容,実験結果,それによるモデルの作成について記述する.
+
+\section{実験準備}
+人同士に置ける人間の誘導の動作から,位置と向きの情報のログファイルを取得した.
+またこの際に案内の音声を読み上げ,録音する作業も併せて行った.
+その様子を図\ref{exppre}に示す.
+
+\begin{comment}
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{exppre.eps}
+\caption{実験準備の様子}
+\label{exppre}
+\end{center}
+\end{figure}
+\end{comment}
+
+\section{実験内容}
+本稿では全方位台車による矢上の案内を被験者に受けさせ,被験者の位置と向きの
+データを取得する実験を行った.
+案内というタスクにしたのは,位置・向きの誘導回数が多く,効率的にデータを取れるからである.
+実験の具体的な内容としては,図\ref{expmap}のような空間で全方位台車の動作および音声により矢上の案内を行った.
+図の軌跡は案内する際の全方位台車の動作軌跡であり,また1～7の場所で下記の対応するテキストの音声を再生した.
+
+\begin{enumerate}
+\item 矢上キャンパスの東側には厚生棟,実験棟,リサーチセンターがあります.また,厚生棟2階には生協食堂があり,授業や研究の合間に生徒が食事をとっています.
+\item 矢上キャンパスから東を見ると運動場があります.左側には体育館,奥にはグラウンドがあります.体育館ではスポーツが出来る他,学生がシャワーをあびることも出来ます.
+\item 
+矢上キャンパスの新棟から北を見ると東京方面の景色が広がっています.武蔵小杉のビルが見えます.
+\item 矢上キャンパスの北側には32棟と33棟が渡り廊下でつながっているのが見えます.またその付近には,紅葉が横並びに立っています.
+\item 矢上キャンパスの南側には新棟と呼ばれる円柱の建物があります.2001年に完成した矢上キャンパスで一番新しいガラス張りの建物です.
+\item 矢上キャンパスの西側には教育研究棟と呼ばれる11棟や21棟があります.１１棟は大きな4つの教室があり数100人の生徒が一斉に
+授業を受けられます.
+\item 東急東横線の線路が住宅の奥に見えます.この角度からは見えませんが,少し南に日吉駅があります.
+
+\end{enumerate}
+
+展示物は矢上の建物に見立てた積み木と,矢上から見える風景をついたてに貼ったものの二種類を用意した.
+1～7の展示物の写真を,図\ref{exp14},図\ref{exp2},図\ref{exp3},図\ref{exp56},図\ref{exp7}に示した.
+全方位台車には,搬送用の車両を想定するため400mm立法の黒いアクリルボックスを載せた.
+また正面がどこか分かるよう,アクリルボックスの１つの面の上側に白テープで白線を作った.
+被験者には音声を聞かせるためのヘッドホンと位置・向きのデータ取得のためのセンサをとりつけた.
+それらの様子が分かるよう,実験空間の実際の写真を図\ref{exppic},実験時の全方位台車を図\ref{expomni},また被験者の装備を図\ref{exphum}に示す.
+被験者にはこのような形で二分間ほど案内を受けさせた.
+またこの実験は,全方位台車の回転運動による誘導の有用性を示すため,回転を用いた案内動作と用いない案内動作(軌跡は同じ)で比較実験にした.
+回転を用いた案内では,全方位台車は1～7の各案内地点において展示物の方を向く動作を行う.
+モデル作成に関しては回転を用いた案内動作による実験の結果を用いた.
+
+\begin{comment}
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{expmap.eps}
+\caption{実験空間の俯瞰図}
+\label{expmap}
+\end{center}
+\end{figure}
+\end{comment}
+
+\begin{comment}
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{exp14.eps}
+\caption{1および4の展示物}
+\label{exp14}
+\end{center}
+ \end{minipage}
+ \begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{exp2.eps}
+\caption{2の展示物}
+\label{exp2}
+\end{center}
+ \end{minipage}
+\end{figure}
+\end{comment}
+
+\begin{comment}
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{exp3.eps}
+\caption{3の展示物}
+\label{exp3}
+\end{center}
+ \end{minipage}
+ \begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{exp56.eps}
+\caption{5および6の展示物}
+\label{exp56}
+\end{center}
+ \end{minipage}
+\end{figure}
+\end{comment}
+
+
+\begin{comment}
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{exp7.eps}
+\caption{7の展示物}
+\label{exp7}
+\end{center}
+\end{figure}
+\end{comment}
+
+\begin{comment}
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{exppic.eps}
+\caption{実験空間の写真}
+\label{exppic}
+\end{center}
+\end{figure}
+\end{comment}
+
+\begin{comment}
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{expomni.eps}
+\caption{実験時の全方位台車}
+\label{expomni}
+\end{center}
+\end{figure}
+\end{comment}
+
+\begin{comment}
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{exphum.eps}
+\caption{実験時の被験者の装備}
+\label{exphum}
+\end{center}
+\end{figure}
+\end{comment}
+
+
+
+
+
+\subsection{被験者について}
+本稿の実験では,回転を用いた案内で5人,用いない案内でも5人,の計10人の被験者で実験を行った.
+被験者には全方位台車が案内をする旨のみ伝えてある.
+
+\newpage
+
+\section{実験結果}
+\subsection{回転を用いた案内における被験者の位置・向き}
+1～7それぞれのポイントで展示物を全方位台車が案内している際の,全方位台車と被験者の位置関係のモデルはA(図\ref{model1}),B(図\ref{model2}),C(図\ref{model3}),D(図\ref{model4})の4パターンあった.
+全方位台車と被験者の距離や角度の計算方法を以下に記述する.
+
+\begin{itemize}
+\item 1～7に全方位台車がいる際の被験者の位置・向きの平均値をログファイルから出力した
+\item 各地点での全方位台車と被験者の位置・向きの関係を調べ,全体で4パターンに場合わけした
+\item データ数で重み付けして,各パターンにおける全方位台車と被験者の距離,および角度の平均値を計算した
+\end{itemize}
+
+なお,各パターンのデータ数およびその内訳は表\ref{pattern}のようになっている.
+4の地点においてパターンBとCに分かれたことと,1人が図\ref{kanaikiseki}のように途中から逆に回って6,7のパターンが他の被験者と変わったことにより各パターンのデータ数がずれている.
+このようにして,全方位台車と被検者の位置・向きの関係をモデル化した.
+
+\begin{comment}
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{kanaikiseki.eps}
+\caption{他と違う動きをした被験者の軌跡}
+\label{kanaikiseki}
+\end{center}
+\end{figure}
+\end{comment}
+
+
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+A & 地点2 $\times$ 5人 & 地点3 $\times$ 5人 & 地点7 $\times$ 1人 & 11\\
+\hline
+B & 地点4 $\times$ 2人 & 地点7 $\times$ 4人 & & 6\\
+\hline
+C & 地点1 $\times$ 5人 & 地点4 $\times$ 3人 & 地点6 $\times$ 1人 & 9\\
+\hline
+D & 地点5 $\times$ 5人 & 地点6 $\times$ 4人 & & 9\\
+\hline
+\end{tabular}
+\end{center}
+\caption{各パターンのデータ数内訳}
+\label{pattern}
+\end{table}
+
+\begin{comment}
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=7cm,height=6cm]{model1.eps}
+\caption{モデルA}
+\label{model1}
+\end{center}
+ \end{minipage}
+ \begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=7cm,height=6cm]{model2.eps}
+\caption{モデルB}
+\label{model2}
+\end{center}
+ \end{minipage}
+\end{figure}
+\end{comment}
+
+\begin{comment}
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=7cm,height=6cm]{model3.eps}
+\caption{モデルC}
+\label{model3}
+\end{center}
+ \end{minipage}
+ \begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=7cm,height=6cm]{model4.eps}
+\caption{モデルD}
+\label{model4}
+\end{center}
+ \end{minipage}
+\end{figure}
+\end{comment}
+
+
+
+
+\subsection{回転の有無による比較}
+本稿では案内動作の回転の有無による比較実験を行ったので,それに関する結果を記述する.
+回転を用いた案内動作では,被験者は必ず全方位台車に追随する形で案内を受け,軌跡は図\ref{kaitenkiseki}のようになった.
+赤い線が被験者の軌跡を示している.
+対して回転を用いない案内動作では,全方位台車に追随せずに案内を受ける例が見られた.
+その場合の軌跡は図\ref{nokaitenkiseki}のようになった.
+これは回転を用いた案内動作の場合,被験者は全方位台車をコミュニケーション対象として見ているが,
+回転を用いない案内動作の場合,被験者は全方位台車をポインティングとして見ているのではないかと考えた.
+この結果より,回転を用いる事により被験者の位置の誘導が効果的に行うことが出来たと言える.
+
+\begin{comment}
+\begin{figure}[htbp]
+ \begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{kaitenkiseki.eps}
+\caption{回転を用いた案内動作における被験者の軌跡}
+\label{kaitenkiseki}
+\end{center}
+ \end{minipage}
+ \begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=5cm,height=5cm]{nokaitenkiseki.eps}
+\caption{回転を用いない案内動作における被験者の軌跡}
+\label{nokaitenkiseki}
+\end{center}
+ \end{minipage}
+\end{figure}
+\end{comment}
+

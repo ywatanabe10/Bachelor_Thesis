@@ -1,0 +1,46 @@
+\newcommand{\etalchar}[1]{{\em {#1}}}
+\begin{thebibliography}{}
+
+\bibitem[Ameba ]{ameba}
+Ameba.
+\newblock {アメーバブログ}.
+\newblock http://ameblo.jp/.
+
+\bibitem[AU 06]{au}
+AU.
+\newblock {EZメール読み上げ}.
+\newblock http://www.au.kddi.com/ez\_mail\_yomiage/index.html, 2006.
+
+\bibitem[goo ]{goo}
+goo.
+\newblock {gooブログ}.
+\newblock http://blog.goo.ne.jp/.
+
+\bibitem[Kazuhiko~Shinozawa {\etalchar{et~al.}} 05]{shinozawa}
+Junji~Yamato Kazuhiko~Shinozawa, Futoshi~Naya, and Kiyoshi Kogure.
+\newblock Differences in effect of robot and screen agent recommendations on
+  human decision-making.
+\newblock {\em International Journal of Human-Computer Studies}, pp. 267--279,
+  2005.
+
+\bibitem[Livedoor ]{live}
+Livedoor.
+\newblock {\em {LivedoorBlog}}.
+\newblock http://blog.livedoor.com/.
+
+\bibitem[W.Berger {\etalchar{et~al.}} 71]{berger}
+Kenneth W.Berger, and Gerald R.Popelka.
+\newblock Extra-facial gestures in relation to speechreading.
+\newblock {\em Journal of Communication Disorders}, pp. 302--308, 1971.
+
+\bibitem[WordPress ]{wordpress}
+WordPress.
+\newblock {\em {}}.
+\newblock http://ja.wordpress.org/.
+
+\bibitem[xypoint 00]{xypoint}
+xypoint.
+\newblock {\em {Nomad}}.
+\newblock http://www.xypoint.com/, 2000.
+
+\end{thebibliography}

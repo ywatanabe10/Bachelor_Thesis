@@ -1,0 +1,10 @@
+PWD /Users/default/workspace/vs_workspace/KeioThesisTemplates/ja_bachelor
+INPUT /usr/local/texlive/2020/texmf.cnf
+INPUT /usr/local/texlive/2020/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/default/workspace/vs_workspace/KeioThesisTemplates/ja_bachelor/main.tex
+OUTPUT /Users/default/workspace/vs_workspace/KeioThesisTemplates/ja_bachelor/main.log
+INPUT /usr/local/texlive/2020/texmf-dist/tex/platex/base/jreport.cls
+INPUT /usr/local/texlive/2020/texmf-dist/tex/platex/base/jreport.cls
+INPUT /Users/default/workspace/vs_workspace/KeioThesisTemplates/ja_bachelor/b_thesis.sty
+INPUT /Users/default/workspace/vs_workspace/KeioThesisTemplates/ja_bachelor/b_thesis.sty

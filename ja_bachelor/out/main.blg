@@ -1,0 +1,65 @@
+This is pBibTeX, Version 0.99d-j0.33 (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: my_jalpha.bst
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: introduction.aux
+A level-1 auxiliary file: background.aux
+A level-1 auxiliary file: proposal.aux
+A level-1 auxiliary file: implement.aux
+A level-1 auxiliary file: robotexample.aux
+A level-1 auxiliary file: test.aux
+A level-1 auxiliary file: evaluation.aux
+A level-1 auxiliary file: conclusion.aux
+A level-1 auxiliary file: thanks.aux
+Database file #1: reference.bib
+Warning--I didn't find a database entry for "Wolfram"
+Warning--I didn't find a database entry for "Maren"
+Warning--I didn't find a database entry for "Isi"
+Warning--I didn't find a database entry for "Imai"
+Warning--I didn't find a database entry for "L"
+Warning--I didn't find a database entry for "Tada"
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 8 entries,
+            3315 wiz_defined-function locations,
+            747 strings with 6043 characters,
+and the built_in function-call counts, 3199 in all, are:
+= -- 284
+> -- 88
+< -- 16
++ -- 20
+- -- 20
+* -- 144
+:= -- 442
+add.period$ -- 24
+call.type$ -- 8
+change.case$ -- 36
+chr.to.int$ -- 8
+cite$ -- 8
+duplicate$ -- 178
+empty$ -- 273
+format.name$ -- 58
+if$ -- 728
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 2
+newline$ -- 44
+num.names$ -- 32
+pop$ -- 95
+preamble$ -- 1
+purify$ -- 50
+quote$ -- 0
+skip$ -- 175
+stack$ -- 0
+substring$ -- 112
+swap$ -- 29
+text.length$ -- 14
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 96
+warning$ -- 0
+while$ -- 20
+width$ -- 12
+write$ -- 97
+is.kanji.str$ -- 84
+(There were 6 warnings)

@@ -1,0 +1,350 @@
+%%\chapter{実装}
+
+
+\chapter{システムの実装}
+本章では,本研究において用いる誘導データ取得システム,実験用システム,分析システム,
+誘導動作確認システムの実装について説明する.
+また,本研究で用いたハードの仕様やハードに関する実装も併せて説明する.
+
+\section{使用したハードの仕様}
+\subsection{全方位台車}
+\par
+本稿では全方位台車として三菱電機特機システム株式会社の小型全方位ロボット(図\ref{mitubisiomni})を用いた.
+スペックは表\ref{mitubisispec}のようになっている.
+
+\begin{comment}
+\begin{figure}[!h]
+\begin{center}
+
+\includegraphics[width=5cm,height=5cm]{mitubisiomni.eps}
+\caption{小型全方位ロボット}
+\label{mitubisiomni}
+\end{center}
+\end{figure}
+\end{comment}
+
+\begin{table}[!h]
+
+
+
+\begin{center}
+\begin{tabular}{|c|c|}
+
+
+\hline
+型名 & MDT-RO-02\\
+\hline
+外形寸法 & 直径390mm,高さ151mm \\
+\hline
+重量 & 約8kg(バッテリー含む) \\
+\hline
+電源 & 模型用DC7.2V ニッケル水素バッテリー\\
+\hline
+標準モーター & マブチモータ RS-380シリーズ \\
+\hline
+ギア比 & 1/36(6.5r/s:出力軸)\\
+\hline
+最高移動速度(無負荷/平地走行時)  & 約1.5km/h\\
+\hline
+積載重量 & 15kg以下(設置面の状態による)\\
+\hline
+通信方式 & 無線LAN(2.4GHz)\\
+\hline
+\end{tabular}
+\end{center}
+
+\caption{全方位台車のスペック}
+\label{mitubisispec}
+\end{table}
+
+
+この全方位台車は周囲に90°ごとに4個のホイールが配置されており,また無線受信機を搭載している.
+その受信機とUDP通信を行い,4個のホイールそれぞれの回転数を指定することにより動作する.
+
+
+\subsection{モーションキャプチャシステム}
+本稿では,全方位台車や人の位置を取得するシステムとして
+OptiTrack社のモーションキャプチャシステムを用いた.
+ソフトウェアはNatural Point Tracking Tools,ハードウェアはモーションキャプチャカメラ「S250e」を用いた.
+S250eの写真を図\ref{S250e}に示す.
+また,S250eのスペックを表\ref{S250espec}に示す.
+
+\begin{comment}
+\begin{figure}[!h]
+\begin{center}
+
+\includegraphics[width=5cm,height=5cm]{S250e.eps}
+\caption{モーションキャプチャカメラ「S250e」}
+\label{S250e}
+\end{center}
+\end{figure}
+\end{comment}
+
+
+\begin{table}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+
+
+\hline
+幅 & 8.1cm & 遅延時間 & 4ms \\
+\hline
+高さ & 8.0cm & 精度 & 1mm以下 \\
+\hline
+奥行 & 6.8cm & レンズ視野角 & 43°,56° \\
+\hline
+重さ & 431g & シャッタータイプ & グローバル\\
+\hline
+フレームレート & 250-30(調整可能) & IRリング & 96個のLED付 \\
+\hline
+MJPEGフレームレート & 125-30(調整可能) & インターフェース & Ethernet/PoE \\
+\hline
+解像度 & 832×832 & マウント & 1/4"-20 \\
+\hline
+\end{tabular}
+\end{center}
+
+\caption{S250eのスペック}
+\label{S250espec}
+\end{table}
+
+このモーションキャプチャシステムでは,赤外線を反射するセンサを図\ref{sensorplate}のように3個一組の状態にした剛体プレートの位置及び向きの情報が得られる.
+3個一組の状態をあらかじめ登録しておき,それらの相対的位置により各々のセンサプレートの個体認識をしている.
+
+\begin{comment}
+\begin{figure}[!h]
+\begin{center}
+
+\includegraphics[width=5cm,height=5cm]{sensorplate.eps}
+\caption{センサプレート}
+\label{sensorplate}
+\end{center}
+\end{figure}
+\end{comment}
+
+
+\section{ハードの利用}
+本研究ではハードとしてモーションキャプチャおよび全方位台車を用いている.
+ここではそれらの実装について記述する.
+\subsection{モーションキャプチャ}
+本研究ではモーションキャプチャシステムとしてOptiTrack社の
+Natural Point Tracking Toolsというソフトウェアを用いている.
+このソフトウェアでは以下の関数を用いてセンサのデータを取得する.
+\\
+\\
+\verb|TT_TrackableLocation(TRUCK,&x,&y,&z,&qx,&qy,&qz,&qw,&yaw,&pitch,&roll);|
+\\
+\\
+
+\begin{itemize}
+\item TRUCK
+\begin{itemize}
+\item 予め定義したセンサプレートの番号(int値)
+\item どのセンサプレートの位置情報を取得するか指定
+\end{itemize}
+
+\item \verb|&x,&y,&z|
+\begin{itemize}
+\item センサの位置情報を格納する変数をここで指定
+\end{itemize}
+
+\item \verb|&qx,&qy,&qz|
+\begin{itemize}
+\item 回転演算がしやすい虚数を用いた位置情報
+\item 本研究では用いない
+\end{itemize}
+
+\item \verb|&yaw,&pitch,&roll|
+\begin{itemize}
+\item センサプレートの向き
+\item 本研究ではyawのみを用いる
+\end{itemize}
+\end{itemize}
+
+\subsection{全方位台車}
+\subsubsection{モーター値の送信}
+本研究で用いた全方位台車はUDP通信により-100～100のモーター値を送信しホイールを回転させることで動作する.
+具体的には"RXT000GM,モーター値,モーター値;"という文字列を送信する.
+ホイールが2個1組となっており,上記の文字列を2つのソケットにそれぞれ送信することにより
+合計4個のホイールを動作させる.
+数字を文字列に組み込むのには,sprintf関数を用いた.
+
+\subsubsection{モーター値の計算}
+図\ref{omniact}「絶対座標系における全方向移動車の制御」
+の行列式を基に,モーター値の計算プログラムを実装した\cite[p15]{Tada}.
+
+\begin{comment}
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=13cm,height=8cm]{omniact.eps}
+\caption{絶対座標系における全方位台車の制御}
+\label{omniact}
+\end{center}
+\end{figure}
+\end{comment}
+
+\newpage
+
+モーター値を求める際には角度を補正する計算と距離を補正する計算をそれぞれ行った.
+角度を補正するプログラムの擬似コードを以下に示す.
+
+\vspace{4zh} 
+\hrule width 15cm
+\begin{verbatimtab}	
+IF モーターの角度差が正方向へ180°以内 OR 負方向へ180°より大きい THEN
+		IF モーターの角度差が負方向へ180°より大きい THEN
+			角度差=360-角度差の絶対値
+	
+		各ホイールのモーター値 = |角度差*定数|
+		
+IF モーターの角度差が負方向へ180°以内または正方向へ180°より大きい THEN
+		IF モーターの角度差が正方向へ180°より大きい THEN
+			角度差=360-角度差の絶対値
+	
+		各ホイールのモーター値 = -|角度差*定数|
+\end{verbatimtab}
+\hrule width 15cm
+\vspace{4zh}
+
+目標と現在の角度差に定数をかけて適切な値にした物を4個のホイールのモーター値に足した.
+また,角度差を直す回転方向は右回りと左回りの2通りあるが,必ず180°以内の回転角度に収まるように場合分けをした.
+次に距離を補正するプログラムの擬似コードを以下に示す.
+X,Yはそれぞれ図\ref{omniact}の座標軸を表す.
+またモーター値の番号は図\ref{omniact}の$v1$ ～ $v4$の番号に対応している.
+
+\vspace{4zh} 
+\hrule width 15cm
+\begin{verbatimtab}	
+モーター1の値 += - sin(台車の角度)*X座標の距離*定数+cos(台車の角度)*Y座標の距離*定数)
+モーター2の値 +=   cos(台車の角度)*X座標の距離*定数+sin(台車の角度)*Y座標の距離*定数)
+モーター3の値 +=   sin(台車の角度)*X座標の距離*定数-cos(台車の角度)*Y座標の距離*定数)
+モーター4の値 += - cos(台車の角度)*X座標の距離*定数-sin(台車の角度)*Y座標の距離*定数)
+\end{verbatimtab}
+\hrule width 15cm
+\vspace{4zh}
+
+行列式の$v_X$ および$v_Y$にかかる部分の計算をしている.
+ここでも定数を掛けて適切なモーター値になるよう調整をしている.
+
+%\vspace{4zh} 
+%\\
+%\\
+%\hrule width 15cm
+
+%\ovalbox{
+%\begin{verbatimtab}
+%	truck_rad=truck_yaw * PI / 180.0;
+%//全方位台車の角度を度からラジアンに変換
+
+%		M1+=(int)(-sin(truck_rad)*dif_x*speed+cos(truck_rad)*dif_z*speed);
+%		M2+=(int)(cos(truck_rad)*dif_x*speed+sin(truck_rad)*dif_z*speed);
+%		M3+=(int)(sin(truck_rad)*dif_x*speed-cos(truck_rad)*dif_z*speed);
+%		M4+=(int)(-cos(truck_rad)*dif_x*speed-sin(truck_rad)*dif_z*speed);
+%			//絶対座標系において進む方向および速度を計算
+%\end{verbatimtab}
+%}
+%\hrule width 15cm
+%\\
+%\\
+%\vspace{4zh} 
+
+
+%ここでは目標との距離差を補正するモーター値の計算をしている.
+%\verb|truck_rad| ,\verb|truck_yaw| はそれぞれラジアン,度で表した全方位台車の角度である.
+
+
+
+
+\section{実時間管理}
+本研究のシステムでは,実時間的に動作が一致するようにログの記録や読み出しを
+0.05秒間隔で行っている.
+この時間間隔はプログラムの実行時間とログの精度の兼ね合いを考えて決定した.
+具体的な実装方法としてはGetFileTime,FileTimeToSystemTime関数により時刻を取得し,
+プログラムが1ループした際に0.05秒経過していなければ経過するまでwhile文を回すという方法を取った.
+
+
+\section{誘導データ取得システム}
+
+
+\subsection{モーションキャプチャモジュール}
+\verb|TT_TrackableLocation| 関数を用いて人間の両肩の2次元座標を取得する.
+また,それをもとに位置・向きの算出を行う.
+位置は両肩の座標の中点を取った.
+角度は,以下の擬似コードのプログラムで計算をした.
+
+
+\vspace{4zh} 
+\hrule width 15cm
+\begin{verbatimtab}
+人間のラジアン単位の角度 = アークタンジェント(縦軸方向の距離/横軸方向の距離)
+
+IF 右肩が左上 THEN
+	人間のラジアン単位の角度 += π
+ELSE IF 右肩が左下 THEN
+	人間のラジアン単位の角度 -= π
+	
+人間の度単位の角度 = (人間のラジアン単位の角度*180)/π
+\end{verbatimtab}
+\hrule width 15cm
+\vspace{4zh} 
+
+アークタンジェントを用いて両肩の座標を結んだ傾きから計算する.
+また,atanの範囲は-90°～90°なので,場合わけを行いモーションキャプチャの値に対応するよう
+-180°～180°に直している.
+
+
+\subsection{ログデータ管理モジュール}
+モーションキャプチャモジュールにおいて取得したデータを,1要素ずつ改行してテキストファイルに保存する.
+ログには通し番号およびシステム時間を利用したタイムスタンプが各組のデータにつけられる.
+
+
+\section{実験用システム}
+実験用システムの実装を以下に示す.
+
+
+
+\subsection{音声再生モジュール}
+wavオーディオファイルを再生するPlaySound関数を用いて録音したファイルを再生する.
+タイミングはログファイルの通し番号を見て,番号がある値になったら再生するという形であわせた.
+
+
+\subsection{ログデータ管理モジュール}
+データの記録に関しては誘導動作取得システムと同様である.
+保存したフォーマットに従い一度に一組(ある時間における座標値)のログデータを読み出す.
+実験用システム,誘導動作取得システムともにに0.05秒ごとに1ループするようになっているので,
+これによりデータを記録した際と実時間的に同じ動作が出来る.
+
+\subsection{全方位台車動作モジュール}
+全方位台車に関する実装で説明したとおり,各ホイールのモーター値を計算して送信する.
+
+
+
+\section{分析システム}
+分析システムの実装について以下で説明する.
+
+\subsection{ログデータ管理モジュール}
+実験システムと同様である.
+
+\subsection{描画モジュール}
+描画ライブラリにOpenGLを用いて,全方位台車および被験者の位置と向きを線分により2次元マップに描画する.
+誘導対象となる展示物の位置も,あらかじめ座標を入れておき併せて描画する.
+
+
+
+\section{誘導動作確認システム}
+誘導動作確認システムの実装について以下で説明する.
+
+
+\subsection{誘導予測モジュール}
+実験の章で後述するモデルにより,全方位台車と予測される人間の位置・向きの差分が分かる.
+これを元に全方位台車の位置・向きから差分を足し引きして,モデルにおける人間の相対的な位置・向きを算出する.
+
+
+\subsection{ログデータ管理モジュール}
+分析システムと同様である.
+
+
+\subsection{描画モジュール}
+分析システムと同様である.
+
