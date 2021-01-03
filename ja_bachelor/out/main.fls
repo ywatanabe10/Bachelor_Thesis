@@ -1,10 +1,10 @@
-PWD /Users/default/workspace/vs_workspace/KeioThesisTemplates/ja_bachelor
+PWD /Users/default/workspace/vs_workspace/My_Bachelor_Thesis/ja_bachelor
 INPUT /usr/local/texlive/2020/texmf.cnf
 INPUT /usr/local/texlive/2020/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2020/texmf.cnf
 INPUT /usr/local/texlive/2020/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2020/texmf-var/web2c/eptex/platex.fmt
-INPUT /Users/default/workspace/vs_workspace/KeioThesisTemplates/ja_bachelor/main.tex
+INPUT /Users/default/workspace/vs_workspace/My_Bachelor_Thesis/ja_bachelor/main.tex
 OUTPUT out/main.log
 INPUT /usr/local/texlive/2020/texmf-dist/tex/platex/base/jreport.cls
 INPUT /usr/local/texlive/2020/texmf-dist/tex/platex/base/jreport.cls
