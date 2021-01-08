@@ -7,7 +7,7 @@
 
 
 
-% Save file as: TABVERB.STY            Source: FILESERV@SHSU.BITNET  
+% Save file as: TABVERB.STY            Source: FILESERV@SHSU.BITNET
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %    Verbatim With Tabbing and Page Breaks
@@ -43,24 +43,24 @@
 %         \end{verbatim}
 %
 %   or:
-%         \inputverbatim{filename}         % input a file of text 
+%         \inputverbatim{filename}         % input a file of text
 %
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
- 
+
+
 %
 % A version message
 %
 \typeout{Tabbing Verbatim Style <September 29, 1987>}
- 
+
 \newlength{\tabwidth}
 \settowidth{\tabwidth}{\normalsize\tt mmmmmmmm}
 	% default is 8 characters of \tt font in \normalsize
- 
+
 \begingroup
 \catcode`\^^I=\active\def^^L{}
- 
+
 \gdef\@newverbatim{\@verbatim
     \def\par{\egroup\@@par\noindent
     \@tempdima 0pt\hbox\bgroup{}}\obeylines
@@ -70,7 +70,7 @@
     \box\@tempboxa
     \advance\@tempdima by \@tempdimb \computeskip\penalty10000
     \hskip\@tempdimb\advance\@tempdima by \@tempdimb
-    \hbox\bgroup{}}\def^^L{\egroup\setbox\@tempboxa\lastbox 
+    \hbox\bgroup{}}\def^^L{\egroup\setbox\@tempboxa\lastbox
     \@tempdimb\wd\@tempboxa
     \ifdim\@tempdimb=0pt\else\box\@tempboxa\fi
     {\let\par\@@par\newpage}\noindent\hbox\bgroup\@gobblecr}\relax
@@ -80,22 +80,22 @@
     \ifdim\@tempdima=\@tempdimb \advance\@tempcnta1\fi
     \@tempdimb\@tempcnta \tabwidth \advance \@tempdimb
     by -\@tempdima}}
- 
+
 \gdef\verbatim{\@newverbatim\frenchspacing\@vobeyspaces
     \@xverbatim\noindent\hbox\bgroup\@gobblecr}
- 
-\gdef\endverbatim{\egroup\setbox\@tempboxa\lastbox 
+
+\gdef\endverbatim{\egroup\setbox\@tempboxa\lastbox
     \@tempdimb\wd\@tempboxa
     \ifdim\@tempdimb=0pt\else\box\@tempboxa\fi
     \let\par\@@par\endtrivlist}
- 
+
 %
 % Now we define \inputverbatim
 %
 % This is similar to \verbatim but does not need \@xverbatim trickery
 % to delimit the begining and end of the verbatim text.
- 
+
 \gdef\inputverbatim#1{{\@newverbatim\frenchspacing\@vobeyspaces
     \noindent\hbox\bgroup\input{#1}\endverbatim}}
- 
+
 \endgroup
