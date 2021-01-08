@@ -1,10 +1,10 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  3 JAN 2021 15:33
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  8 JAN 2021 11:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/default/workspace/vs_workspace/My_Bachelor_Thesis/ja_bachelor/main.tex
-(/Users/default/workspace/vs_workspace/My_Bachelor_Thesis/ja_bachelor/main.tex
+**/Users/default/workspace/vs_workspace/Bachelor_Thesis/ja_bachelor/main.tex
+(/Users/default/workspace/vs_workspace/Bachelor_Thesis/ja_bachelor/main.tex
 pLaTeX2e <2020-02-02>+3 (based on LaTeX2e <2020-02-02> patch level 5)
 L3 programming layer <2020-03-06> (/usr/local/texlive/2020/texmf-dist/tex/platex/base/jreport.cls
 Document Class: jreport 2020/01/03 v1.8e Standard pLaTeX class
@@ -159,50 +159,56 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \algorithmicindent=\skip53
 ) (./indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip54
+\multirow@cntb=\count192
+\multirow@dima=\skip55
+\bigstrutjot=\dimen174
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 File: l3backend-dvips.def 2020-03-12 L3 backend support: dvips
 \l__pdf_internal_box=\box76
-\g__pdf_backend_object_int=\count192
+\g__pdf_backend_object_int=\count193
 \l__pdf_backend_content_box=\box77
 \l__pdf_backend_model_box=\box78
-\g__pdf_backend_annotation_int=\count193
-\g__pdf_backend_link_int=\count194
-\g__pdf_backend_link_sf_int=\count195
-) (out/main.aux (out/abstract.aux) (out/introduction.aux) (out/background.aux) (out/proposal.aux) (out/implement.aux) (out/robotexample.aux) (out/test.aux) (out/evaluation.aux) (out/conclusion.aux) (out/thanks.aux))
+\g__pdf_backend_annotation_int=\count194
+\g__pdf_backend_link_int=\count195
+\g__pdf_backend_link_sf_int=\count196
+) (out/main.aux (out/abstract.aux) (out/introduction.aux) (out/relatedwork.aux) (out/proposal.aux) (out/evaluation.aux) (out/discussion.aux) (out/futurework.aux) (out/conclusion.aux) (out/thanks.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 48.
+(Font)              <12> on input line 49.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 48.
+(Font)              <8> on input line 49.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 48.
+(Font)              <6> on input line 49.
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <20.74> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 48.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <20.74> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 48.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <20.74> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 48.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 48.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 49.
 [0
 
 ]
@@ -210,28 +216,28 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
 
 (./abstract.tex
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <17.28> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 30.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 14.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 30.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 14.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <17.28> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 30.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 14.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 30.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 30.
+(Font)              <14.4> on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 30.
+(Font)              <7> on input line 14.
 [1
 
 ])
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <24.88> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 56.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 56.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <24.88> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 56.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 56.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 57.
 (out/main.toc
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <12> not available
 (Font)              Font shape `JT1/mc/bx/n' tried instead on input line 1.
@@ -241,82 +247,52 @@ LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <12> not available
 (Font)              Font shape `JY1/mc/bx/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
-[1
-
-
-])
+)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
-
-LaTeX Font Warning: Font shape `JT1/mc/m/sl' undefined
-(Font)              using `JT1/mc/m/n' instead on input line 57.
+[1
 
 
-LaTeX Font Warning: Font shape `JY1/mc/m/sl' undefined
-(Font)              using `JY1/mc/m/n' instead on input line 57.
-
-[2] (out/main.lof)
+] (out/main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
-[3
+[2
 
 ] (out/main.lot)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
-[4
+[3
 
 ]
+
+LaTeX Font Warning: Font shape `JT1/mc/m/sl' undefined
+(Font)              using `JT1/mc/m/n' instead on input line 85.
+
+
+LaTeX Font Warning: Font shape `JY1/mc/m/sl' undefined
+(Font)              using `JY1/mc/m/n' instead on input line 85.
+
+[1]
 \openout2 = `introduction.aux'.
 
 (./introduction.tex
 第1章
-
-LaTeX Warning: Reference `omnitruck' on page 1 undefined on input line 8.
-
-Excluding 'comment' comment.
-
-LaTeX Warning: Reference `RHINO' on page 1 undefined on input line 27.
+[2
 
 
-LaTeX Warning: Citation `Wolfram' on page 1 undefined on input line 27.
+]) [3]
+\openout2 = `relatedwork.aux'.
 
-
-LaTeX Warning: Reference `Alpha' on page 1 undefined on input line 29.
-
-
-LaTeX Warning: Citation `Maren' on page 1 undefined on input line 29.
-
-
-LaTeX Warning: Reference `KEITA' on page 1 undefined on input line 30.
-
-
-LaTeX Warning: Citation `Isi' on page 1 undefined on input line 30.
-
-Excluding 'comment' comment. Excluding 'comment' comment. Excluding 'comment' comment. [1
-
-
-]) [2]
-\openout2 = `background.aux'.
-
-(./background.tex
+(./relatedwork.tex
 第2章
-
-LaTeX Warning: Citation `Imai' on page 3 undefined on input line 11.
-
-
-LaTeX Warning: Citation `L' on page 3 undefined on input line 15.
-
-
-LaTeX Warning: Citation `Tada' on page 3 undefined on input line 17.
-
-[3
+) [4
 
 
 
-]) [4]
+]
 \openout2 = `proposal.aux'.
 
 (./proposal.tex
@@ -325,154 +301,30 @@ LaTeX Warning: Citation `Tada' on page 3 undefined on input line 17.
 
 
 
-] [6]
-\openout2 = `implement.aux'.
-
-(./implement.tex
-第4章
-
-LaTeX Warning: Reference `mitubisiomni' on page 7 undefined on input line 12.
-
-Excluding 'comment' comment.
-
-LaTeX Warning: Reference `S250e' on page 7 undefined on input line 69.
-
-[7
-
-
-
-] Excluding 'comment' comment.
-
-LaTeX Warning: Reference `sensorplate' on page 8 undefined on input line 112.
-
-Excluding 'comment' comment. [8]
-
-LaTeX Warning: Reference `omniact' on page 9 undefined on input line 174.
-
-
-LaTeX Warning: Citation `Tada' on page 9 undefined on input line 175.
-
-Excluding 'comment' comment. [9]
-
-LaTeX Warning: Reference `omniact' on page 10 undefined on input line 213.
-
-
-LaTeX Warning: Reference `omniact' on page 10 undefined on input line 214.
-
-[10] [11] [12]) [13]
-\openout2 = `robotexample.aux'.
-
-(./robotexample.tex
-第5章
-
-LaTeX Warning: Reference `exppre' on page 14 undefined on input line 8.
-
-Excluding 'comment' comment.
-
-LaTeX Warning: Reference `expmap' on page 14 undefined on input line 24.
-
-[14
-
-
-
 ]
-
-LaTeX Warning: Reference `exp14' on page 15 undefined on input line 41.
-
-
-LaTeX Warning: Reference `exp2' on page 15 undefined on input line 41.
-
-
-LaTeX Warning: Reference `exp3' on page 15 undefined on input line 41.
-
-
-LaTeX Warning: Reference `exp56' on page 15 undefined on input line 41.
-
-
-LaTeX Warning: Reference `exp7' on page 15 undefined on input line 41.
-
-
-LaTeX Warning: Reference `exppic' on page 15 undefined on input line 45.
-
-
-LaTeX Warning: Reference `expomni' on page 15 undefined on input line 45.
-
-
-LaTeX Warning: Reference `exphum' on page 15 undefined on input line 45.
-
-Excluding 'comment' comment. Excluding 'comment' comment. Excluding 'comment' comment. Excluding 'comment' comment. Excluding 'comment' comment. Excluding 'comment' comment. Excluding 'comment' comment. [15]
-
-LaTeX Warning: Reference `model1' on page 16 undefined on input line 152.
-
-
-LaTeX Warning: Reference `model2' on page 16 undefined on input line 152.
-
-
-LaTeX Warning: Reference `model3' on page 16 undefined on input line 152.
-
-
-LaTeX Warning: Reference `model4' on page 16 undefined on input line 152.
-
-
-LaTeX Warning: Reference `kanaikiseki' on page 16 undefined on input line 162.
-
-Excluding 'comment' comment. Excluding 'comment' comment. Excluding 'comment' comment.
-
-LaTeX Warning: Reference `kaitenkiseki' on page 16 undefined on input line 238.
-
-
-LaTeX Warning: Reference `nokaitenkiseki' on page 16 undefined on input line 241.
-
-Excluding 'comment' comment.) [16] [17]
-\openout2 = `test.aux'.
-
-(./test.tex
-第6章
-
-LaTeX Warning: Reference `modelApic' on page 18 undefined on input line 7.
-
-Excluding 'comment' comment.
-
-LaTeX Warning: Reference `modelAfkiseki' on page 18 undefined on input line 21.
-
-
-LaTeX Warning: Reference `modelAf' on page 18 undefined on input line 25.
-
-Excluding 'comment' comment.
-
-LaTeX Warning: Reference `modelAskiseki' on page 18 undefined on input line 52.
-
-
-LaTeX Warning: Reference `modelAs' on page 18 undefined on input line 53.
-
-Excluding 'comment' comment.
-
-LaTeX Warning: Reference `modelCpic' on page 18 undefined on input line 77.
-
-Excluding 'comment' comment. [18
-
-
-
-]
-
-LaTeX Warning: Reference `modelCfkiseki' on page 19 undefined on input line 91.
-
-
-LaTeX Warning: Reference `modelCf' on page 19 undefined on input line 94.
-
-Excluding 'comment' comment.
-
-LaTeX Warning: Reference `modelCskiseki' on page 19 undefined on input line 119.
-
-
-LaTeX Warning: Reference `modelCs' on page 19 undefined on input line 120.
-
-Excluding 'comment' comment.) [19]
 \openout2 = `evaluation.aux'.
 
 (./evaluation.tex
-第7章
-) [20
+第4章
+) [6
+
+
+
+]
+\openout2 = `discussion.aux'.
+
+(./discussion.tex
+第5章
+) [7
+
+
+
+]
+\openout2 = `futurework.aux'.
+
+(./futurework.tex
+第6章
+) [8
 
 
 
@@ -480,19 +332,19 @@ Excluding 'comment' comment.) [19]
 \openout2 = `conclusion.aux'.
 
 (./conclusion.tex
-第8章
-) [21
+第7章
+) [9
 
 
 
 ]
 \openout2 = `thanks.aux'.
 
-(./thanks.tex) [22
+(./thanks.tex) [10
 
 
 
-] (out/main.bbl
+] (./main.bbl
 
 LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
 (Font)              using `JT1/gt/m/n' instead on input line 19.
@@ -501,24 +353,21 @@ LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
 LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
 (Font)              using `JY1/gt/m/n' instead on input line 19.
 
-) [23
+) [11
 
 
-] (out/main.aux (out/abstract.aux) (out/introduction.aux) (out/background.aux) (out/proposal.aux) (out/implement.aux) (out/robotexample.aux) (out/test.aux) (out/evaluation.aux) (out/conclusion.aux) (out/thanks.aux))
+] (out/main.aux (out/abstract.aux) (out/introduction.aux) (out/relatedwork.aux) (out/proposal.aux) (out/evaluation.aux) (out/discussion.aux) (out/futurework.aux) (out/conclusion.aux) (out/thanks.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 2056 strings out of 481140
- 28249 string characters out of 5917416
- 281167 words of memory out of 5000000
- 17996 multiletter control sequences out of 15000+600000
- 547536 words of font info for 83 fonts, out of 8000000 for 9000
+ 2058 strings out of 481140
+ 28556 string characters out of 5917416
+ 281532 words of memory out of 5000000
+ 18001 multiletter control sequences out of 15000+600000
+ 547199 words of font info for 82 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 30i,12n,26p,319b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,12n,26p,826b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/main.dvi (29 pages, 77340 bytes).
+Output written on out/main.dvi (16 pages, 21656 bytes).

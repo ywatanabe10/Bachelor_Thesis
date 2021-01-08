@@ -18,6 +18,7 @@
 \usepackage{algorithm}
 \usepackage{algorithmic}
 \usepackage{indentfirst}
+\usepackage{multirow}
 
 \pagestyle{headings}
 %\pagestyle{drafts}
@@ -64,17 +65,29 @@
 \baselineskip = 20pt
 
 
+\begin{table}[htb]
+  \begin{center}
+  \caption{人間による推定と推定モデルの相関}
+  \begin{tabular}{l|c|c} \hline
+    \multirow{2}{*}{モデル}&\multicolumn{2}{c}{相関}\\\cline{2-3}
+    & \hspace{10pt} 信念 \hspace{10pt} & \hspace{10pt} 欲求 \hspace{10pt} \\ \hline
+    UIoM(action)&0.124&0.419\\
+    UIoM(utterance)&0.216&0.494\\
+    MIoM(action + utterance)&0.244&0.549 \\\hline
+  \end{tabular}
+\end{center}
+\end{table}
+
+
 %%
 %% 論文構成．ここは適宜変更する
 %%
 \include{introduction}
-\include{background}
+\include{relatedwork}
 \include{proposal}
-% \include{design}
-\include{implement}
-\include{robotexample}
-\include{test}
 \include{evaluation}
+\include{discussion}
+\include{futurework}
 \include{conclusion}
 %%
 %%
