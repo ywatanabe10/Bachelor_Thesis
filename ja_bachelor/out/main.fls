@@ -142,19 +142,23 @@ OUTPUT out/main.lof
 INPUT out/main.lot
 INPUT out/main.lot
 OUTPUT out/main.lot
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsl12.tfm
 OUTPUT out/introduction.aux
 INPUT introduction.tex
 INPUT introduction.tex
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsl12.tfm
 OUTPUT out/relatedwork.aux
 INPUT relatedwork.tex
 INPUT relatedwork.tex
 OUTPUT out/proposal.aux
 INPUT proposal.tex
 INPUT proposal.tex
+INPUT ./bt1.pdf
+INPUT extractbb -B cropbox -O ./bt1.pdf
 OUTPUT out/evaluation.aux
 INPUT evaluation.tex
 INPUT evaluation.tex
+INPUT ./figure.pdf
+INPUT extractbb -B cropbox -O ./figure.pdf
 OUTPUT out/discussion.aux
 INPUT discussion.tex
 INPUT discussion.tex
