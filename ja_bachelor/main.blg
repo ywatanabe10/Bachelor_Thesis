@@ -4,11 +4,27 @@ The top-level auxiliary file: main.aux
 The style file: my_jalpha.bst
 A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: introduction.aux
-A level-1 auxiliary file: background.aux
+I couldn't open auxiliary file background.aux
+---line 6 of file main.aux
+ : \@input{background.aux
+ :                       }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: proposal.aux
-A level-1 auxiliary file: implement.aux
-A level-1 auxiliary file: robotexample.aux
-A level-1 auxiliary file: test.aux
+I couldn't open auxiliary file implement.aux
+---line 8 of file main.aux
+ : \@input{implement.aux
+ :                      }
+I'm skipping whatever remains of this command
+I couldn't open auxiliary file robotexample.aux
+---line 9 of file main.aux
+ : \@input{robotexample.aux
+ :                         }
+I'm skipping whatever remains of this command
+I couldn't open auxiliary file test.aux
+---line 10 of file main.aux
+ : \@input{test.aux
+ :                 }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: evaluation.aux
 A level-1 auxiliary file: conclusion.aux
 A level-1 auxiliary file: thanks.aux
@@ -16,13 +32,10 @@ Database file #1: reference.bib
 Warning--I didn't find a database entry for "Wolfram"
 Warning--I didn't find a database entry for "Maren"
 Warning--I didn't find a database entry for "Isi"
-Warning--I didn't find a database entry for "Imai"
-Warning--I didn't find a database entry for "L"
-Warning--I didn't find a database entry for "Tada"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 You've used 8 entries,
             3315 wiz_defined-function locations,
-            747 strings with 6043 characters,
+            743 strings with 6027 characters,
 and the built_in function-call counts, 3199 in all, are:
 = -- 284
 > -- 88
@@ -62,4 +75,4 @@ while$ -- 20
 width$ -- 12
 write$ -- 97
 is.kanji.str$ -- 84
-(There were 6 warnings)
+(There were 4 error messages)

@@ -368,7 +368,7 @@ FUNCTION {format.number.series}
 { volume empty$
     { number empty$
 	{ series field.or.null }
-	{ number is.kanji.str$ 
+	{ number is.kanji.str$
 	    { number }
 	    { "No." number tie.or.space.connect }
 	  if$
@@ -527,7 +527,7 @@ FUNCTION {format.in.ed.booktitle}
 FUNCTION {empty.misc.check}
 { author empty$ title empty$ howpublished empty$
   month empty$ year empty$ inalso empty$ note empty$
-  and and and and and and 
+  and and and and and and
   key empty$ not and
     { "all relevant fields are empty in " cite$ * warning$ }
     'skip$
@@ -603,7 +603,7 @@ FUNCTION {format.crossref.editor}
 	      if$
 	    }
 	    { editor is.kanji.str$
-		{ ", " * 
+		{ ", " *
 		   editor #2 "{ff}" format.name$ duplicate$
 		   empty$
 		     { pop$ editor #2 "{ll}" format.name$ }
@@ -670,7 +670,7 @@ FUNCTION {format.incoll.inproc.crossref}
 	      ""
 	    }
 	    { booktitle is.kanji.str$
-		  { " { " booktitle * "\/}" * } 
+		  { " { " booktitle * "\/}" * }
 		  { "In {\em " booktitle * "\/}" * }
 		if$
 	    }
@@ -1549,4 +1549,3 @@ FUNCTION {end.bib}
 }
 
 EXECUTE {end.bib}
-
