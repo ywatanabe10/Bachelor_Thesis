@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  9 JAN 2021 12:36
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  9 JAN 2021 21:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -216,17 +216,17 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
 
 (./abstract.tex
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <17.28> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 14.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 13.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 14.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 13.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <17.28> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 14.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 13.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 14.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 13.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 14.
+(Font)              <14.4> on input line 13.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 14.
+(Font)              <7> on input line 13.
 [1
 
 ])
@@ -288,11 +288,19 @@ LaTeX Font Warning: Font shape `JY1/mc/m/sl' undefined
 
 (./relatedwork.tex
 第2章
-) [3
+
+LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
+(Font)              using `JT1/gt/m/n' instead on input line 4.
+
+
+LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
+(Font)              using `JY1/gt/m/n' instead on input line 4.
+
+[3
 
 
 
-]
+]) [4]
 \openout2 = `proposal.aux'.
 
 (./proposal.tex
@@ -304,7 +312,7 @@ Overfull \hbox (40.4614pt too wide) in paragraph at lines 12--13
  [] 
  []
 
-) [4
+) [5
 
 
 
@@ -320,21 +328,21 @@ Overfull \hbox (7.48466pt too wide) in paragraph at lines 9--10
  [] 
  []
 
-[5
+[6
 
 
 
-] [6])
+] [7])
 Overfull \hbox (21.93402pt too wide) in paragraph at lines 74--76
 []\JY1/mc/m/sl/12 表 \OT1/cmr/m/n/12 4.3 \JY1/mc/m/sl/12 より， \OT1/cmr/m/n/12 MIoM \JY1/mc/m/sl/12 は信念と欲求の推定の両方において \OT1/cmr/m/n/12 UIoM(action) \JY1/mc/m/sl/12 および \OT1/cmr/m/n/12 UIoM(utterance)
  []
 
-[7] [8]
+[8] [9]
 \openout2 = `discussion.aux'.
 
 (./discussion.tex
 第5章
-) [9
+) [10
 
 
 
@@ -343,7 +351,7 @@ Overfull \hbox (21.93402pt too wide) in paragraph at lines 74--76
 
 (./futurework.tex
 第6章
-) [10
+) [11
 
 
 
@@ -352,27 +360,18 @@ Overfull \hbox (21.93402pt too wide) in paragraph at lines 74--76
 
 (./conclusion.tex
 第7章
-) [11
+) [12
 
 
 
 ]
 \openout2 = `thanks.aux'.
 
-(./thanks.tex) [12
+(./thanks.tex) [13
 
 
 
-] (./main.bbl
-
-LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
-(Font)              using `JT1/gt/m/n' instead on input line 19.
-
-
-LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
-(Font)              using `JY1/gt/m/n' instead on input line 19.
-
-) [13
+] (./main.bbl) [14
 
 
 ] (out/main.aux (out/abstract.aux) (out/introduction.aux) (out/relatedwork.aux) (out/proposal.aux) (out/evaluation.aux) (out/discussion.aux) (out/futurework.aux) (out/conclusion.aux) (out/thanks.aux))
@@ -381,12 +380,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 2074 strings out of 481140
- 28768 string characters out of 5917416
- 281584 words of memory out of 5000000
- 18013 multiletter control sequences out of 15000+600000
+ 2073 strings out of 481140
+ 28796 string characters out of 5917416
+ 281583 words of memory out of 5000000
+ 18012 multiletter control sequences out of 15000+600000
  547199 words of font info for 82 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  30i,12n,26p,1168b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/main.dvi (18 pages, 32096 bytes).
+Output written on out/main.dvi (19 pages, 38216 bytes).

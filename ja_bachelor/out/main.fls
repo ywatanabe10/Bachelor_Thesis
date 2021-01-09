@@ -149,6 +149,7 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsl12.tfm
 OUTPUT out/relatedwork.aux
 INPUT relatedwork.tex
 INPUT relatedwork.tex
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 OUTPUT out/proposal.aux
 INPUT proposal.tex
 INPUT proposal.tex
@@ -173,7 +174,6 @@ INPUT thanks.tex
 INPUT thanks.tex
 INPUT main.bbl
 INPUT main.bbl
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT out/main.aux
 INPUT out/abstract.aux
 INPUT out/abstract.aux

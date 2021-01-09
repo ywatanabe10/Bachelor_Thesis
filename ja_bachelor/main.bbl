@@ -1,46 +1,38 @@
 \newcommand{\etalchar}[1]{{\em {#1}}}
 \begin{thebibliography}{}
 
-\bibitem[Ameba ]{ameba}
-Ameba.
-\newblock {アメーバブログ}.
-\newblock http://ameblo.jp/.
+\bibitem[Baker {\etalchar{et~al.}} 11]{baker2011bayesian}
+Chris Baker, Rebecca Saxe, and Joshua Tenenbaum.
+\newblock Bayesian theory of mind: Modeling joint belief-desire attribution.
+\newblock In {\em Proceedings of the annual meeting of the cognitive science
+  society}, Vol.~33, 2011.
 
-\bibitem[AU 06]{au}
-AU.
-\newblock {EZメール読み上げ}.
-\newblock http://www.au.kddi.com/ez\_mail\_yomiage/index.html, 2006.
+\bibitem[Darwish {\etalchar{et~al.}} 20]{darwish2020learning}
+Amena Darwish, and H~Joe Steinhauer.
+\newblock Learning individual driver’s mental models using pomdps and btom.
+\newblock In {\em DHM2020: Proceedings of the 6th International Digital Human
+  Modeling Symposium, August 31-September 2, 2020}, Vol.~11, p.~51. IOS Press,
+  2020.
 
-\bibitem[goo ]{goo}
-goo.
-\newblock {gooブログ}.
-\newblock http://blog.goo.ne.jp/.
+\bibitem[Petkovi{\'c} {\etalchar{et~al.}} 18]{inbook}
+Tomislav Petkovi{\'c}, Ivan Markovi{\'c}, and Ivan Petrovic.
+\newblock {\em Human Intention Recognition in Flexible Robotized Warehouses
+  Based on Markov Decision Processes}, pp. 629--640.
+\newblock 01 2018.
 
-\bibitem[Kazuhiko~Shinozawa {\etalchar{et~al.}} 05]{shinozawa}
-Junji~Yamato Kazuhiko~Shinozawa, Futoshi~Naya, and Kiyoshi Kogure.
-\newblock Differences in effect of robot and screen agent recommendations on
-  human decision-making.
-\newblock {\em International Journal of Human-Computer Studies}, pp. 267--279,
-  2005.
+\bibitem[Shikha {\etalchar{et~al.}} 09]{10.1007/978-3-642-02481-8_4}
+Mehta Shikha, Banati Hema, and Bedi Punam.
+\newblock Bdi planning approach to distributed multiagent based semantic search
+  engine.
+\newblock In Sigeru Omatu, Miguel~P. Rocha, Jos{\'e} Bravo, Florentino
+  Fern{\'a}ndez, Emilio Corchado, Andr{\'e}s Bustillo, and Juan~M. Corchado,
+  editors, {\em Distributed Computing, Artificial Intelligence, Bioinformatics,
+  Soft Computing, and Ambient Assisted Living}, pp. 25--28, Berlin, Heidelberg,
+  2009. Springer Berlin Heidelberg.
 
-\bibitem[Livedoor ]{live}
-Livedoor.
-\newblock {\em {LivedoorBlog}}.
-\newblock http://blog.livedoor.com/.
-
-\bibitem[W.Berger {\etalchar{et~al.}} 71]{berger}
-Kenneth W.Berger, and Gerald R.Popelka.
-\newblock Extra-facial gestures in relation to speechreading.
-\newblock {\em Journal of Communication Disorders}, pp. 302--308, 1971.
-
-\bibitem[WordPress ]{wordpress}
-WordPress.
-\newblock {\em {}}.
-\newblock http://ja.wordpress.org/.
-
-\bibitem[xypoint 00]{xypoint}
-xypoint.
-\newblock {\em {Nomad}}.
-\newblock http://www.xypoint.com/, 2000.
+\bibitem[目良{ 他} 02]{2002}
+目良和也, 市村匠, 相沢輝昭, 山下利之.
+\newblock 語の好感度に基づく自然言語発話からの情緒生起手法.
+\newblock 人工知能学会論文誌, Vol.~17, No.~3, pp. 186--195, 2002.
 
 \end{thebibliography}
