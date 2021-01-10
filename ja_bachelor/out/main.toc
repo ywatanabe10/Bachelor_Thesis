@@ -1,8 +1,8 @@
 \contentsline {chapter}{\numberline {1}序論}{1}%
 \contentsline {chapter}{\numberline {2}関連研究}{3}%
-\contentsline {section}{\numberline {2.1}行動情報から心的状態を推定する研究}{3}%
-\contentsline {section}{\numberline {2.2}言語情報から心的状態を推定する研究}{3}%
-\contentsline {section}{\numberline {2.3}単一情報による心的状態推定の問題点}{4}%
+\contentsline {section}{\numberline {2.1}単一情報から心的状態を推定する研究}{3}%
+\contentsline {section}{\numberline {2.2}単一情報から心的状態を推定する研究}{3}%
+\contentsline {section}{\numberline {2.3}単一情報心的状態推定の問題点}{4}%
 \contentsline {chapter}{\numberline {3}提案}{5}%
 \contentsline {section}{\numberline {3.1}アルゴリズム}{5}%
 \contentsline {section}{\numberline {3.2}システム構成}{5}%
