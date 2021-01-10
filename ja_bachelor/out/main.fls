@@ -172,6 +172,8 @@ INPUT proposal.tex
 INPUT proposal.tex
 INPUT ./bt1.pdf
 INPUT extractbb -B cropbox -O ./bt1.pdf
+INPUT ./miom.pdf
+INPUT extractbb -B cropbox -O ./miom.pdf
 OUTPUT out/evaluation.aux
 INPUT evaluation.tex
 INPUT evaluation.tex
