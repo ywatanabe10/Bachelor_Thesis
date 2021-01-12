@@ -11,9 +11,9 @@
 \contentsline {section}{\numberline {4.2}実験手順}{11}%
 \contentsline {section}{\numberline {4.3}実験結果}{14}%
 \contentsline {chapter}{\numberline {5}考察}{15}%
-\contentsline {chapter}{\numberline {6}今後の課題}{16}%
-\contentsline {section}{\numberline {6.1}単語埋め込みモデルの検討}{16}%
-\contentsline {section}{\numberline {6.2}対話相手の発話に対する応答生成}{16}%
-\contentsline {section}{\numberline {6.3}実世界情報による心的状態の推定}{16}%
-\contentsline {chapter}{\numberline {7}結論}{17}%
-\contentsline {chapter}{謝辞}{18}%
+\contentsline {chapter}{\numberline {6}今後の課題}{17}%
+\contentsline {section}{\numberline {6.1}実世界情報による心的状態の推定}{17}%
+\contentsline {section}{\numberline {6.2}単語埋め込みモデルの検討}{17}%
+\contentsline {section}{\numberline {6.3}対話相手の発話に対する応答生成}{17}%
+\contentsline {chapter}{\numberline {7}結論}{18}%
+\contentsline {chapter}{謝辞}{19}%
