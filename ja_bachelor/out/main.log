@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  13 JAN 2021 11:29
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  13 JAN 2021 13:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -403,23 +403,23 @@ Overfull \hbox (6.0341pt too wide) in paragraph at lines 22--23
 []\JY1/mc/m/sl/12 最後に発話の生起確率の計算方法の検討について考える ． \OT1/cmr/m/n/12 MIoM \JY1/mc/m/sl/12 では ， 発話 $\OML/cmm/m/it/12 u[]$ \JY1/mc/m/sl/12 を \OT1/cmr/m/n/12 Word2Vec
  []
 
-) [18]
+) [18] [19]
 \openout2 = `conclusion.aux'.
 
 (./conclusion.tex
 第7章
-) [19
+) [20
 
 
 
 ]
 \openout2 = `thanks.aux'.
 
-(./thanks.tex) [20
+(./thanks.tex) [21
 
 
 
-] (./main.bbl) [21
+] (./main.bbl) [22
 
 
 ] (out/main.aux (out/abstract.aux) (out/introduction.aux) (out/relatedwork.aux) (out/proposal.aux) (out/evaluation.aux) (out/discussion.aux) (out/futurework.aux) (out/conclusion.aux) (out/thanks.aux))
@@ -436,4 +436,4 @@ Here is how much of TeX's memory you used:
  929 hyphenation exceptions out of 8191
  30i,16n,26p,1017b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/main.dvi (26 pages, 71980 bytes).
+Output written on out/main.dvi (27 pages, 73632 bytes).
