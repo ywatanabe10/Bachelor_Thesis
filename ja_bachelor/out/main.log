@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  14 JAN 2021 21:38
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  14 JAN 2021 21:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -435,4 +435,4 @@ Here is how much of TeX's memory you used:
  929 hyphenation exceptions out of 8191
  30i,16n,26p,1075b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/main.dvi (28 pages, 76652 bytes).
+Output written on out/main.dvi (28 pages, 76752 bytes).
