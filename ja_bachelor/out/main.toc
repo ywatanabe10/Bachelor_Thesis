@@ -3,7 +3,7 @@
 \contentsline {section}{\numberline {2.1}行動情報から心的状態を推定する研究}{3}%
 \contentsline {section}{\numberline {2.2}言語情報から心的状態を推定する研究}{5}%
 \contentsline {section}{\numberline {2.3}単一情報心的状態推定の問題点}{5}%
-\contentsline {chapter}{\numberline {3}提案}{7}%
+\contentsline {chapter}{\numberline {3}Multimodal Inference of Mind}{7}%
 \contentsline {section}{\numberline {3.1}関連研究との相違点}{7}%
 \contentsline {section}{\numberline {3.2}アルゴリズム}{7}%
 \contentsline {chapter}{\numberline {4}評価}{11}%

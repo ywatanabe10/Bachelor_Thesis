@@ -160,11 +160,11 @@ OUTPUT out/main.lot
 OUTPUT out/introduction.aux
 INPUT introduction.tex
 INPUT introduction.tex
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsl12.tfm
 OUTPUT out/relatedwork.aux
 INPUT relatedwork.tex
 INPUT relatedwork.tex
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT ./btom.pdf
 INPUT extractbb -B cropbox -O ./btom.pdf
 OUTPUT out/proposal.aux
