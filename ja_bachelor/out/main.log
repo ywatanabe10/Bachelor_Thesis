@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  14 JAN 2021 11:59
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  14 JAN 2021 16:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -341,16 +341,11 @@ LaTeX Font Warning: Font shape `JY1/mc/m/sl' undefined
 第2章
 File: ./btom.pdf Graphic file (type pdf)
 <./btom.pdf>
-
-Overfull \hbox (12.23073pt too wide) in paragraph at lines 4--13
-\OT1/cmr/m/n/12 (ToM) \JY1/mc/m/sl/12 をベイズ推論を用いてモデル化する \OT1/cmr/m/n/12 Bayesian The-ory of Mind (BToM)[[]]
- []
-
 [3
 
 
 
-] [4]) [5] [6]
+] [4]) [5]
 \openout2 = `proposal.aux'.
 
 (./proposal.tex
@@ -362,14 +357,14 @@ Overfull \hbox (11.85619pt too wide) in paragraph at lines 6--7
 
 File: ./bt1.pdf Graphic file (type pdf)
 <./bt1.pdf>
-[7
+[6
 
 
 
 ]
 File: ./miom.pdf Graphic file (type pdf)
 <./miom.pdf>
-[8] [9]) [10]
+[7] [8]) [9]
 \openout2 = `evaluation.aux'.
 
 (./evaluation.tex
@@ -381,25 +376,25 @@ Overfull \hbox (7.48466pt too wide) in paragraph at lines 9--10
  [] 
  []
 
-[11
+[10
 
 
 
-] [12] [13]) [14]
+] [11] [12]) [13]
 \openout2 = `discussion.aux'.
 
 (./discussion.tex
 第5章
-) [15
+) [14
 
 
 
-] [16]
+] [15]
 \openout2 = `futurework.aux'.
 
 (./futurework.tex
 第6章
-[17
+[16
 
 
 
@@ -408,37 +403,37 @@ Overfull \hbox (6.0341pt too wide) in paragraph at lines 22--23
 []\JY1/mc/m/sl/12 最後に発話の生起確率の計算方法の検討について考える ． \OT1/cmr/m/n/12 MIoM \JY1/mc/m/sl/12 では ， 発話 $\OML/cmm/m/it/12 u[]$ \JY1/mc/m/sl/12 を \OT1/cmr/m/n/12 Word2Vec
  []
 
-[18]) [19]
+[17]) [18]
 \openout2 = `conclusion.aux'.
 
 (./conclusion.tex
 第7章
-) [20
+) [19
 
 
 
 ]
 \openout2 = `thanks.aux'.
 
-(./thanks.tex) [21
+(./thanks.tex) [20
 
 
 
-] (./main.bbl) [22
+] (./main.bbl [21
 
 
-] (out/main.aux (out/abstract.aux) (out/introduction.aux) (out/relatedwork.aux) (out/proposal.aux) (out/evaluation.aux) (out/discussion.aux) (out/futurework.aux) (out/conclusion.aux) (out/thanks.aux))
+]) [22] (out/main.aux (out/abstract.aux) (out/introduction.aux) (out/relatedwork.aux) (out/proposal.aux) (out/evaluation.aux) (out/discussion.aux) (out/futurework.aux) (out/conclusion.aux) (out/thanks.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 2712 strings out of 481140
- 36075 string characters out of 5917416
- 296064 words of memory out of 5000000
- 18631 multiletter control sequences out of 15000+600000
+ 2713 strings out of 481140
+ 36097 string characters out of 5917416
+ 296074 words of memory out of 5000000
+ 18632 multiletter control sequences out of 15000+600000
  548324 words of font info for 87 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  30i,16n,26p,1075b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/main.dvi (27 pages, 76076 bytes).
+Output written on out/main.dvi (27 pages, 76200 bytes).

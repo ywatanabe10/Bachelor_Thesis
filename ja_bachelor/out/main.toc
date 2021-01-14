@@ -3,17 +3,17 @@
 \contentsline {section}{\numberline {2.1}行動情報から心的状態を推定する研究}{3}%
 \contentsline {section}{\numberline {2.2}言語情報から心的状態を推定する研究}{5}%
 \contentsline {section}{\numberline {2.3}単一情報心的状態推定の問題点}{5}%
-\contentsline {chapter}{\numberline {3}Multimodal Inference of Mind}{7}%
-\contentsline {section}{\numberline {3.1}関連研究との相違点}{7}%
-\contentsline {section}{\numberline {3.2}アルゴリズム}{7}%
-\contentsline {chapter}{\numberline {4}評価}{11}%
-\contentsline {section}{\numberline {4.1}実験設定}{11}%
-\contentsline {section}{\numberline {4.2}実験手順}{11}%
-\contentsline {section}{\numberline {4.3}実験結果}{14}%
-\contentsline {chapter}{\numberline {5}考察}{15}%
-\contentsline {chapter}{\numberline {6}今後の課題}{17}%
-\contentsline {section}{\numberline {6.1}実世界情報による心的状態の推定}{17}%
-\contentsline {section}{\numberline {6.2}発話情報の検討}{17}%
-\contentsline {section}{\numberline {6.3}対話相手の発話に対する応答生成}{18}%
-\contentsline {chapter}{\numberline {7}結論}{20}%
-\contentsline {chapter}{謝辞}{21}%
+\contentsline {chapter}{\numberline {3}Multimodal Inference of Mind}{6}%
+\contentsline {section}{\numberline {3.1}関連研究との相違点}{6}%
+\contentsline {section}{\numberline {3.2}アルゴリズム}{6}%
+\contentsline {chapter}{\numberline {4}評価}{10}%
+\contentsline {section}{\numberline {4.1}実験設定}{10}%
+\contentsline {section}{\numberline {4.2}実験手順}{10}%
+\contentsline {section}{\numberline {4.3}実験結果}{13}%
+\contentsline {chapter}{\numberline {5}考察}{14}%
+\contentsline {chapter}{\numberline {6}今後の課題}{16}%
+\contentsline {section}{\numberline {6.1}実世界情報による心的状態の推定}{16}%
+\contentsline {section}{\numberline {6.2}発話情報の検討}{16}%
+\contentsline {section}{\numberline {6.3}対話相手の発話に対する応答生成}{17}%
+\contentsline {chapter}{\numberline {7}結論}{19}%
+\contentsline {chapter}{謝辞}{20}%
