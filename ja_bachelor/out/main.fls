@@ -179,13 +179,17 @@ INPUT extractbb -B cropbox -O ./miom.pdf
 OUTPUT out/evaluation.aux
 INPUT evaluation.tex
 INPUT evaluation.tex
-INPUT ./figure.pdf
-INPUT extractbb -B cropbox -O ./figure.pdf
+INPUT ./ex_env1.pdf
+INPUT extractbb -B cropbox -O ./ex_env1.pdf
 INPUT ./interface.pdf
 INPUT extractbb -B cropbox -O ./interface.pdf
 OUTPUT out/discussion.aux
 INPUT discussion.tex
 INPUT discussion.tex
+INPUT ./ex_env2.pdf
+INPUT extractbb -B cropbox -O ./ex_env2.pdf
+INPUT ./ex_env3.pdf
+INPUT extractbb -B cropbox -O ./ex_env3.pdf
 OUTPUT out/futurework.aux
 INPUT futurework.tex
 INPUT futurework.tex

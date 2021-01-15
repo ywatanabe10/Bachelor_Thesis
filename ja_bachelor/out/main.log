@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  15 JAN 2021 18:07
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  15 JAN 2021 19:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -371,13 +371,8 @@ Overfull \hbox (25.88956pt too wide) in paragraph at lines 59--76
 
 (./evaluation.tex
 第4章
-File: ./figure.pdf Graphic file (type pdf)
-<./figure.pdf>
-
-Overfull \hbox (7.48466pt too wide) in paragraph at lines 9--10
- [] 
- []
-
+File: ./ex_env1.pdf Graphic file (type pdf)
+<./ex_env1.pdf>
 [12
 
 
@@ -385,37 +380,52 @@ Overfull \hbox (7.48466pt too wide) in paragraph at lines 9--10
 ] [13]
 File: ./interface.pdf Graphic file (type pdf)
 <./interface.pdf>
-[14] [15]) [16]
+) [14] [15]
 \openout2 = `discussion.aux'.
 
 (./discussion.tex
 第5章
-) [17
+File: ./ex_env2.pdf Graphic file (type pdf)
+<./ex_env2.pdf>
+
+Overfull \hbox (7.27979pt too wide) in paragraph at lines 6--7
+ [] 
+ []
+
+[16
 
 
 
-] [18]
+]
+File: ./ex_env3.pdf Graphic file (type pdf)
+<./ex_env3.pdf>
+
+Overfull \hbox (7.27979pt too wide) in paragraph at lines 17--18
+ [] 
+ []
+
+) [17]
 \openout2 = `futurework.aux'.
 
 (./futurework.tex
 第6章
-[19
+[18
 
 
 
-] [20]) [21]
+] [19]) [20]
 \openout2 = `conclusion.aux'.
 
 (./conclusion.tex
 第7章
-) [22
+) [21
 
 
 
 ]
 \openout2 = `thanks.aux'.
 
-(./thanks.tex) [23
+(./thanks.tex) [22
 
 
 
@@ -426,21 +436,21 @@ File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 41.
-[24
+[23
 
 
-]) [25] (out/main.aux (out/abstract.aux) (out/introduction.aux) (out/relatedwork.aux) (out/proposal.aux) (out/evaluation.aux) (out/discussion.aux) (out/futurework.aux) (out/conclusion.aux) (out/thanks.aux))
+]) [24] (out/main.aux (out/abstract.aux) (out/introduction.aux) (out/relatedwork.aux) (out/proposal.aux) (out/evaluation.aux) (out/discussion.aux) (out/futurework.aux) (out/conclusion.aux) (out/thanks.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 2740 strings out of 481140
- 36535 string characters out of 5917416
- 295086 words of memory out of 5000000
- 18654 multiletter control sequences out of 15000+600000
+ 2751 strings out of 481140
+ 36698 string characters out of 5917416
+ 295108 words of memory out of 5000000
+ 18662 multiletter control sequences out of 15000+600000
  548324 words of font info for 87 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 30i,16n,26p,1105b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,16n,26p,1031b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/main.dvi (30 pages, 80044 bytes).
+Output written on out/main.dvi (29 pages, 81080 bytes).
