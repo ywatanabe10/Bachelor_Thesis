@@ -3,8 +3,8 @@
 \addvspace {10pt}
 \contentsline {figure}{\numberline {2.1}{\ignorespaces BToMにおけるベイズ推論の様子}}{4}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces MIoMによる推定処理}}{9}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces MIoMにおけるベイズ推定}}{9}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces MIoM SCAINによる推定処理}}{9}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces MIoM SCAINにおけるベイズ推定}}{10}%
 \addvspace {10pt}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces 本実験における環境．図中の``Student''は学生，``Truck1''および``Truck2''は屋台を開くスペース，中央の黒色部分は壁を表す．}}{13}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces 本実験に使用したインターフェース}}{15}%
