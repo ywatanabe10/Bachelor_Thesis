@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  14 JAN 2021 21:56
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  15 JAN 2021 10:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -375,25 +375,49 @@ Overfull \hbox (7.48466pt too wide) in paragraph at lines 9--10
  [] 
  []
 
+
+LaTeX Warning: Reference `tab:question' on page 11 undefined on input line 23.
+
+
+LaTeX Warning: Reference `tab:answer' on page 11 undefined on input line 23.
+
 [11
 
 
 
-] [12] [13]) [14]
+] [12]
+File: ./interface.pdf Graphic file (type pdf)
+<./interface.pdf>
+[13] [14]) [15]
 \openout2 = `discussion.aux'.
 
 (./discussion.tex
 第5章
-) [15
+
+LaTeX Warning: Reference `tab:question' on page 16 undefined on input line 7.
+
+
+LaTeX Warning: Reference `tab:answer' on page 16 undefined on input line 7.
+
+
+LaTeX Warning: Reference `tab:question' on page 16 undefined on input line 7.
+
+
+LaTeX Warning: Reference `tab:answer' on page 16 undefined on input line 7.
+
+) [16
 
 
 
-] [16]
+] [17]
 \openout2 = `futurework.aux'.
 
 (./futurework.tex
 第6章
-[17
+
+LaTeX Warning: Reference `tab:answer' on page 18 undefined on input line 16.
+
+[18
 
 
 
@@ -402,37 +426,47 @@ Overfull \hbox (6.0341pt too wide) in paragraph at lines 22--23
 []\JY1/mc/m/sl/12 最後に発話の生起確率の計算方法の検討について考える ． \OT1/cmr/m/n/12 MIoM \JY1/mc/m/sl/12 では ， 発話 $\OML/cmm/m/it/12 u[]$ \JY1/mc/m/sl/12 を \OT1/cmr/m/n/12 Word2Vec
  []
 
-[18]) [19]
+[19]) [20]
 \openout2 = `conclusion.aux'.
 
 (./conclusion.tex
 第7章
-) [20
+) [21
 
 
 
 ]
 \openout2 = `thanks.aux'.
 
-(./thanks.tex) [21
+(./thanks.tex) [22
 
 
 
-] (./main.bbl [22
+] (./main.bbl
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 41.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 41.
+[23
 
 
-]) [23] (out/main.aux (out/abstract.aux) (out/introduction.aux) (out/relatedwork.aux) (out/proposal.aux) (out/evaluation.aux) (out/discussion.aux) (out/futurework.aux) (out/conclusion.aux) (out/thanks.aux))
+]) [24] (out/main.aux (out/abstract.aux) (out/introduction.aux) (out/relatedwork.aux) (out/proposal.aux) (out/evaluation.aux) (out/discussion.aux) (out/futurework.aux) (out/conclusion.aux) (out/thanks.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 2713 strings out of 481140
- 36097 string characters out of 5917416
+ 2737 strings out of 481140
+ 36500 string characters out of 5917416
  297074 words of memory out of 5000000
- 18632 multiletter control sequences out of 15000+600000
+ 18652 multiletter control sequences out of 15000+600000
  548324 words of font info for 87 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  30i,16n,26p,1075b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/main.dvi (28 pages, 76752 bytes).
+Output written on out/main.dvi (29 pages, 76776 bytes).

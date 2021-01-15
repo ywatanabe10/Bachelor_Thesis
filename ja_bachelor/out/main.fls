@@ -179,6 +179,8 @@ INPUT evaluation.tex
 INPUT evaluation.tex
 INPUT ./figure.pdf
 INPUT extractbb -B cropbox -O ./figure.pdf
+INPUT ./interface.pdf
+INPUT extractbb -B cropbox -O ./interface.pdf
 OUTPUT out/discussion.aux
 INPUT discussion.tex
 INPUT discussion.tex
@@ -193,6 +195,8 @@ INPUT thanks.tex
 INPUT thanks.tex
 INPUT main.bbl
 INPUT main.bbl
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/base/omlcmr.fd
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/base/omlcmr.fd
 INPUT out/main.aux
 INPUT out/abstract.aux
 INPUT out/abstract.aux

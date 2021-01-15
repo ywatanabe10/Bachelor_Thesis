@@ -22,33 +22,22 @@
 \par
 本実験には，本研究で作成したデータセットを利用した．本データセットには，屋台の組み合わせを表す環境設定と，その環境設定で考えられる学生の行動，アシストロボットからの質問，学生の応答が含まれる．屋台の組み合わせは日本食の屋台，イタリア料理の屋台，中華料理の屋台の2つの組み合わせとする6通り，学生の行動は上，下，左，右の4方向への移動，アシストロボットからの質問は表\ref{tab:question}に記載される4通り，学生の応答は表\ref{tab:answer}に記載される8通りである．MIoMによって行動情報と発話情報の両方を推定に活用することが有効であることを評価するために，パーティクルフィルタを用い行動情報と発話情報の一方のみを基に心的状態を推定するシステムUnimodal Inference of Mind (UIoM)を定義した．
 
+
 \begin{table}[htb]
   \begin{center}
-  \caption{アシストロボットからの質問}
-  \label{tab:question}
-  \begin{tabular}{c} \hline
-    質問内容\\\hline
-    魚料理と野菜料理どちらを食べたいですか\\
-    パスタと米ではどちらを食べたいですか\\
-    あっさりしたものと，こってりしたものどちらを食べたいですか\\
-    辛いものと酸っぱいものではどちらを食べたいですか\\\hline
+  \caption{アシストロボットからの質問と学生の応答}
+  \label{tab:q_a}
+  \begin{tabular}{lcc} \hline
+    質問内容&\multicolumn{2}{c}{応答内容}\\\hline
+    魚料理と野菜料理どちらを食べたいですか&fish&vegetable\\
+    パスタと米ではどちらを食べたいですか&pasta&rice\\
+    あっさりしたものと，こってりしたものどちらを食べたいですか&plain&oily\\
+    辛いものと酸っぱいものではどちらを食べたいですか&spicy&sour\\\hline
   \end{tabular}
 \end{center}
 \end{table}
 
-\begin{table}[htb]
-  \begin{center}
-  \caption{学生の応答}
-  \label{tab:answer}
-  \begin{tabular}{cc} \hline
-    \multicolumn{2}{c}{応答内容}\\\hline
-    　fish　&　vegetable　\\
-    　pasta　&　rice　\\
-    　plain　&　oily　\\
-    　spicy　&　sour　\\\hline
-  \end{tabular}
-\end{center}
-\end{table}
+
 
 \par
 30人の実験参加者に，本データセットで指定された環境設定と行動およびアシストロボットからの質問と学生の応答を提示し，環境中の学生の信念と欲求をそれぞれ7段階で推定させた．また，MIoM (action + utterance)，行動情報のみを基に心的状態を推定するUIoM (action)，発話情報のみを基に心的状態を推定するUIoM (utterance)の3つのシステムによって，環境中の学生の信念と欲求をそれぞれ7段階で推定した．実験参加者によって得られた推定結果とMIoMおよびUIoM によって得られた推定結果を比較し相関係数を算出した．UIoM (action)およびUIoM (utterance)の尤度は，それぞれ式（\ref{uiom_a}），式（\ref{uiom_u}）で計算した．
@@ -56,7 +45,7 @@
 \begin{equation}
   \begin{split}
   \label{uiom_a}
-  L^k&= \sum_{b_{t-1}^k,o_t}P(b_t^k|b_{t-1}^k,o_t)\cdot P(o_t|s_t)\cdot P(s_t|s_{t-1},a_{t-1})\\
+  L^k({\mathrm{action}})&= \sum_{b_{t-1}^k,o_t}P(b_t^k|b_{t-1}^k,o_t)\cdot P(o_t|s_t)\cdot P(s_t|s_{t-1},a_{t-1})\\
   &\hspace{3cm}\cdot P(a_{t-1}|b_{t-1}^k,d^k)\cdot P(b_{t-1}^k,d^k,s_{t-1},a_{t-2})
   \end{split}
 \end{equation}
@@ -64,11 +53,18 @@
 \begin{equation}
   \begin{split}
   \label{uiom_u}
-  L^k&= \sum_{b_{t-1}^k,o_t}P(b_t^k|b_{t-1}^k,o_t)\cdot P(o_t|s_t)\cdot P(s_t|s_{t-1},a_{t-1})\\
+  L^k({\mathrm{utterance}})&= \sum_{b_{t-1}^k,o_t}P(b_t^k|b_{t-1}^k,o_t)\cdot P(o_t|s_t)\cdot P(s_t|s_{t-1},a_{t-1})\\
   &\hspace{3cm}\cdot P(u_{t-1}|b_{t-1}^k,d^k)\cdot P(b_{t-1}^k,d^k,s_{t-1},u_{t-2})
   \end{split}
 \end{equation}
 
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[scale=0.6]{./interface.pdf}
+    \caption{本実験に使用したインターフェース}
+    \label{fig:interface}
+  \end{center}
+\end{figure}
 
 \section{実験結果}
 
