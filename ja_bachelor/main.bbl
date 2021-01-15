@@ -30,6 +30,11 @@ Mehta Shikha, Banati Hema, and Bedi Punam.
   Soft Computing, and Ambient Assisted Living}, pp. 25--28, Berlin, Heidelberg,
   2009. Springer Berlin Heidelberg.
 
+\bibitem[Takimoto {\etalchar{et~al.}} 20]{takimoto2020slaminspired}
+Yusuke Takimoto, Yosuke Fukuchi, Shoya Matsumori, and Michita Imai.
+\newblock Slam-inspired simultaneous contextualization and interpreting for
+  incremental conversation sentences, 2020.
+
 \bibitem[高橋拓誠{ 他} 15]{高橋拓誠2015bdi}
 高橋拓誠, 目良和也, 黒澤義明, 竹澤寿幸.
 \newblock Bdi モデルを用いた対話戦略に基づく 知的エージェントの構築.

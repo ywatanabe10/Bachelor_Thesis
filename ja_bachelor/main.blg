@@ -35,46 +35,46 @@ Warning--I didn't find a database entry for "Isi"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--can't use both volume and number fields in baker2011bayesian
 Warning--empty publisher in inbook
-You've used 8 entries,
+You've used 9 entries,
             3315 wiz_defined-function locations,
-            760 strings with 6980 characters,
-and the built_in function-call counts, 4901 in all, are:
-= -- 427
-> -- 186
-< -- 21
-+ -- 53
-- -- 53
-* -- 305
-:= -- 644
-add.period$ -- 27
-call.type$ -- 8
-change.case$ -- 53
-chr.to.int$ -- 8
-cite$ -- 10
-duplicate$ -- 249
-empty$ -- 397
-format.name$ -- 105
-if$ -- 1152
+            763 strings with 7175 characters,
+and the built_in function-call counts, 5356 in all, are:
+= -- 461
+> -- 213
+< -- 22
++ -- 61
+- -- 61
+* -- 333
+:= -- 707
+add.period$ -- 29
+call.type$ -- 9
+change.case$ -- 61
+chr.to.int$ -- 9
+cite$ -- 11
+duplicate$ -- 265
+empty$ -- 434
+format.name$ -- 119
+if$ -- 1254
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 10
-newline$ -- 44
-num.names$ -- 34
-pop$ -- 110
+newline$ -- 48
+num.names$ -- 38
+pop$ -- 127
 preamble$ -- 1
-purify$ -- 63
+purify$ -- 72
 quote$ -- 0
-skip$ -- 252
+skip$ -- 276
 stack$ -- 0
-substring$ -- 244
-swap$ -- 72
+substring$ -- 251
+swap$ -- 73
 text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 84
+type$ -- 96
 warning$ -- 2
-while$ -- 31
-width$ -- 11
-write$ -- 110
-is.kanji.str$ -- 122
+while$ -- 33
+width$ -- 12
+write$ -- 120
+is.kanji.str$ -- 135
 (There were 4 error messages)
