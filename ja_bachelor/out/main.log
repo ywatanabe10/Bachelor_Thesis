@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  15 JAN 2021 15:59
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  15 JAN 2021 16:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -389,18 +389,6 @@ File: ./interface.pdf Graphic file (type pdf)
 
 (./discussion.tex
 第5章
-
-LaTeX Warning: Reference `tab:question' on page 17 undefined on input line 7.
-
-
-LaTeX Warning: Reference `tab:answer' on page 17 undefined on input line 7.
-
-
-LaTeX Warning: Reference `tab:question' on page 17 undefined on input line 7.
-
-
-LaTeX Warning: Reference `tab:answer' on page 17 undefined on input line 7.
-
 ) [17
 
 
@@ -410,9 +398,6 @@ LaTeX Warning: Reference `tab:answer' on page 17 undefined on input line 7.
 
 (./futurework.tex
 第6章
-
-LaTeX Warning: Reference `tab:answer' on page 19 undefined on input line 16.
-
 [19
 
 
@@ -452,17 +437,14 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 2742 strings out of 481140
- 36561 string characters out of 5917416
+ 2740 strings out of 481140
+ 36535 string characters out of 5917416
  297085 words of memory out of 5000000
- 18656 multiletter control sequences out of 15000+600000
+ 18654 multiletter control sequences out of 15000+600000
  548324 words of font info for 87 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  30i,16n,26p,1075b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/main.dvi (30 pages, 78464 bytes).
+Output written on out/main.dvi (30 pages, 79480 bytes).
