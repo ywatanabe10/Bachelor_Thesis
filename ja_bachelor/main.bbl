@@ -14,6 +14,11 @@ Amena Darwish, and H~Joe Steinhauer.
   Modeling Symposium, August 31-September 2, 2020}, Vol.~11, p.~51. IOS Press,
   2020.
 
+\bibitem[Mikolov {\etalchar{et~al.}} 13]{mikolov2013efficient}
+Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean.
+\newblock Efficient estimation of word representations in vector space.
+\newblock {\em arXiv preprint arXiv:1301.3781}, 2013.
+
 \bibitem[Petkovi{\'c} {\etalchar{et~al.}} 18]{inbook}
 Tomislav Petkovi{\'c}, Ivan Markovi{\'c}, and Ivan Petrovic.
 \newblock {\em Human Intention Recognition in Flexible Robotized Warehouses
