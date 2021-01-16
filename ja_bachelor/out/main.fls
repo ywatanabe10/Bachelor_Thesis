@@ -188,8 +188,6 @@ INPUT discussion.tex
 INPUT discussion.tex
 INPUT ./ex_env2.pdf
 INPUT extractbb -B cropbox -O ./ex_env2.pdf
-INPUT ./ex_env3.pdf
-INPUT extractbb -B cropbox -O ./ex_env3.pdf
 OUTPUT out/futurework.aux
 INPUT futurework.tex
 INPUT futurework.tex
