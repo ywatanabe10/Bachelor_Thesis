@@ -1,15 +1,15 @@
 \addvspace {10pt}
 \contentsline {figure}{\numberline {1.1}{\ignorespaces 心的状態の推定．人間が食事をとるために飲食店に向かう場面において，3通りの条件で心的状態を推定する．図の左側は，行動情報のみを活用して心的状態を推定した場合，図の中央は発話情報のみを活用して心的状態を推定した場合，図の右側は行動情報と発話情報の両方を活用して心的状態を推定した場合を表す．}}{2}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces BToMにおけるベイズ推論の様子}}{4}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces BToMにおけるベイズ推論の様子}}{5}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces MIoM SCAINによる推定処理}}{9}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces MIoM SCAINにおけるベイズ推定}}{10}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces MIoM SCAINによる推定処理}}{10}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces MIoM SCAINにおけるベイズ推定}}{11}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 本実験における環境．図中の``Student''は学生，``Truck1''および``Truck2''は屋台を開くスペース，中央の黒色部分は壁を表す．}}{13}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 本実験に使用したインターフェース}}{15}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 本実験における環境．図中の``Student''は学生，``Truck1''および``Truck2''は屋台を開くスペース，中央の黒色部分は壁を表す．}}{14}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 本実験に使用したインターフェース}}{16}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces 行動情報と発話情報が影響を与え合う場面}}{17}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces 学生がTruck1を通過した場面}}{18}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces 行動情報と発話情報が影響を与え合う場面}}{18}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces 学生がTruck1を通過した場面}}{19}%
 \addvspace {10pt}
 \addvspace {10pt}
