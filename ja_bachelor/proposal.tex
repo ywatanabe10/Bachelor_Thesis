@@ -17,7 +17,7 @@ MIoM SCAINにおける推定処理の流れをを図\ref{fig:sys_arc}に示す�
     \label{fig:sys_arc}
   \end{center}
 \end{figure}
-図\ref{fig:sys_arc}に示すように，MIoM SCAINは時刻$t$における人間の行動$a_t$，発話$u_t$および環境の状態$s_t$から信念と欲求の確率を出力する．MIoM SCAINは信念$b_t$と欲求$d$の組み合わせとその尤度$L$を持つパーティクルフィルタとして表現され，$a_t,u_t,s_t$とそれぞれのパーティクルが持つ信念$b_t^k$と欲求$d^k$を基に尤度$L^k$が更新される．ここで，尤度$L^k$は次のように表すことができる．
+図\ref{fig:sys_arc}に示すように，MIoM SCAINは時刻$t$における人間の行動$a_t$，発話$u_t$および環境の状態$s_t$から信念と欲求の確率を出力する．MIoM SCAINは信念$b_t$と欲求$d$の組み合わせとその尤度$L$を持つパーティクルフィルタとして表現され，$a_t,u_t,s_t$と$k$番目のパーティクルが持つ信念$b_t^k$と欲求$d^k$を基に尤度$L^k$が更新される．ここで，尤度$L^k$は次のように表すことができる．
 \begin{equation}
   \begin{split}
   \label{pf}
