@@ -36,7 +36,7 @@ BToMによる信念および欲求の推定を評価するための実験を参�
 
 \par
 図\ref{fig:interface}に示すインターフェスを用いて，30人の実験参加者に，本データセットで指定された環境設定と行動およびアシストロボットからの質問と学生の応答を提示し，環境中の学生の信念と欲求をそれぞれ7段階で推定させた．環境設定や行動の内容，アシストロボットからの質問，学生の応答に偏りがないように8つのデータを本データセットから選択し，それぞれの実験参加者に対して提示し，1つのデータに対して2回または3回推定をさせた．
-また，MIoM SCAIN (action + utterance)，行動情報のみを基に心的状態を推定するUIoM SCAIN (action)，発話情報のみを基に心的状態を推定するUIoM SCAIN (utterance)の3つのシステムによって，環境中の学生の信念と欲求を推定し，推定結果を式（\ref{b_transform}）および式（\ref{d_transform}）により，7段階評価に変換した．実験参加者によって得られた推定結果とMIoM SCAINおよびUIoM SCAIN によって得られた推定結果を比較し相関係数を算出した．UIoM SCAIN (action)およびUIoM SCAIN (utterance)の尤度は，それぞれ式（\ref{uiom_a}），式（\ref{uiom_u}）で計算した．
+また，MIoM SCAIN (action + utterance)，行動情報のみを基に心的状態を推定するUIoM SCAIN (action)，発話情報のみを基に心的状態を推定するUIoM SCAIN (utterance)の3つのシステムによって，環境中の学生の信念と欲求を推定し，推定結果を式（\ref{b_transform}）および式（\ref{d_transform}）により，7段階評価に変換した．ここで，$rank^k(\mathrm{food})$は，$k$番目のパーティクルにおける欲求$d_k$を基に$\mathrm{food}$をどの程度好むかを3段階で表した値である．式（\ref{b_transform}）および式（\ref{d_transform}）において，全てのパーティクルを考慮して計算を行うことで，各パーティクルの尤度に差がない場合に対応する．推定を行った全タイミングで，信念推定および欲求推定のそれぞれについて，実験参加者による推定結果とMIoM SCAINおよびUIoM SCAINによる推定結果を比較し，相関係数を算出した．UIoM SCAIN (action)およびUIoM SCAIN (utterance)の尤度は，それぞれ式（\ref{uiom_a}），式（\ref{uiom_u}）で計算した．
 \begin{figure}[htbp]
   \begin{center}
     \includegraphics[scale=0.6]{./interface.pdf}
@@ -48,18 +48,18 @@ BToMによる信念および欲求の推定を評価するための実験を参�
 \begin{equation}
   \begin{split}
   \label{b_transform}
-  b_t(\mathrm{Japanese})= \sum_{\substack{k\\b_t^k=Japanese}} 7\cdot L^k\\
-  b_t(\mathrm{Italian})=\sum_{\substack{k\\b_t^k=Italian}} 7\cdot L^k\\
-  b_t(\mathrm{Chinese})=\sum_{\substack{k\\b_t^k=Chinese}} 7\cdot L^k\\
+  b_t(\mathrm{Japanese})= \sum_{\substack{k\\b_t^k=\mathrm{Japanese}}} 7\cdot L^k\\
+  b_t(\mathrm{Italian})=\sum_{\substack{k\\b_t^k=\mathrm{Italian}}} 7\cdot L^k\\
+  b_t(\mathrm{Chinese})=\sum_{\substack{k\\b_t^k=\mathrm{Chinese}}} 7\cdot L^k\\
   \end{split}
 \end{equation}
 
 \begin{equation}
   \begin{split}
   \label{d_transform}
-  d(\mathrm{Japanese})= \sum_{\substack{k\\d^k=Japanese}} \frac{7}{3}\cdot L^k \cdot rank^k({\mathrm{Japanese}})\\
-  d(\mathrm{Italian})= \sum_{\substack{k\\d^k=Italian}} \frac{7}{3}\cdot L^k \cdot rank^k({\mathrm{Italian}})\\
-  d(\mathrm{Chinese})= \sum_{\substack{k\\d^k=Chinese}} \frac{7}{3}\cdot L^k \cdot rank^k({\mathrm{Chinese}})\\
+  d(\mathrm{Japanese})= \sum_{\substack{k\\d^k=\mathrm{Japanese}}} \frac{7}{3}\cdot L^k \cdot rank^k({\mathrm{Japanese}})\\
+  d(\mathrm{Italian})= \sum_{\substack{k\\d^k=\mathrm{Italian}}} \frac{7}{3}\cdot L^k \cdot rank^k({\mathrm{Italian}})\\
+  d(\mathrm{Chinese})= \sum_{\substack{k\\d^k=\mathrm{Chinese}}} \frac{7}{3}\cdot L^k \cdot rank^k({\mathrm{Chinese}})\\
   \end{split}
 \end{equation}
 
