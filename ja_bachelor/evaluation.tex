@@ -101,6 +101,87 @@ BToMによる信念および欲求の推定を評価するための実験を参�
 \end{center}
 \end{table}
 
+\par
+表\ref{tab:cof}より，いずれの推定システムにおいても欲求推定の相関が信念推定の相関よりも強いことがわかった．
 
 \par
-表\ref{tab:cof}より，信念と欲求の推定の両方において，行動情報と発話情報の両方を推定に活用するMIoM SCAINが行動情報のみを推定に活用するUIoM SCAIN (action)および発話情報のみを推定に活用するUIoM SCAIN (utterance)よりも強い相関を示した．また，いずれの推定システムにおいても欲求推定の相関が信念推定の相関よりも強いことがわかった．
+また，信念と欲求の推定の両方において，行動情報と発話情報の両方を推定に活用するMIoM SCAINが行動情報のみを推定に活用するUIoM SCAIN (action)および発話情報のみを推定に活用するUIoM SCAIN (utterance)よりも強い相関を示すことがわかった．
+
+\par
+ここで，MIoM SCAINによる信念と欲求の推定の相関とUIoM SCAINによる信念と欲求の推定の相関との間に差があると言えるかを$z$検定\cite{alma9926301497204034}によって検定する．
+
+\par
+まず，MIoM SCAINとUIoM SCAIN (action)の信念推定における相関に差があるかを調べる．以下のように仮説を設定する．
+\begin{displaymath}
+  \begin{split}
+  \label{z_a_b_p}
+  \mathrm{帰無仮説：MIoM\; SCAINとUIoM\; SCAIN\; (action)の信念推定の相関に差がない}\\
+  \mathrm{対立仮説：MIoM\; SCAINとUIoM\; SCAIN\; (action)の信念推定の相関に差がある}\\
+  \end{split}
+\end{displaymath}
+また，データ数を考慮して統計検定量$T$は以下のように計算される．
+\begin{displaymath}
+  \begin{split}
+  \label{z_a_b}
+  T&=\sqrt{960-3}\left(\frac{1}{2}\ln{\frac{1-0.244}{1+0.244}-\frac{1}{2}\ln{\frac{1-0.124}{1+0.124}}}\right)\\
+  &=3.85\\
+  \end{split}
+\end{displaymath}
+$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=3.85>1.96$なので，帰無仮説を棄却する．よって，MIoM SCAINとUIoM SCAIN (action)の信念推定における相関に差があると言える．
+
+\par
+次に，MIoM SCAINとUIoM SCAIN (utterance)の信念推定における相関に差があるかを調べる．以下のように仮説を設定する．
+\begin{displaymath}
+  \begin{split}
+    \label{z_a_b}
+    \mathrm{帰無仮説：MIoM\; SCAINとUIoM\; SCAIN\; (utterance)の信念推定の相関に差がない}\\
+    \mathrm{対立仮説：MIoM\; SCAINとUIoM\; SCAIN\; (utterance)の信念推定の相関に差がある}\\
+    \end{split}
+\end{displaymath}
+また，データ数を考慮して統計検定量$T$は以下のように計算される．
+\begin{displaymath}
+  \begin{split}
+  \label{z_a_b}
+  T&=\sqrt{960-3}\left(\frac{1}{2}\ln{\frac{1-0.244}{1+0.244}-\frac{1}{2}\ln{\frac{1-0.216}{1+0.216}}}\right)\\
+  &=0.914\\
+  \end{split}
+\end{displaymath}
+$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=0.914<1.96$なので，帰無仮説を棄却しない．よって，MIoM SCAINとUIoM SCAIN (utterance)の信念推定における相関に差があるとは言えない．
+
+\par
+次に，MIoM SCAINとUIoM SCAIN (action)の欲求推定における相関に差があるかを調べる．以下のように仮説を設定する．
+\begin{displaymath}
+  \begin{split}
+  \label{z_a_b}
+  \mathrm{帰無仮説：MIoM\; SCAINとUIoM\; SCAIN\; (action)の欲求推定の相関に差がない}\\
+  \mathrm{対立仮説：MIoM\; SCAINとUIoM\; SCAIN\; (action)の欲求推定の相関に差がある}\\
+  \end{split}
+\end{displaymath}
+また，データ数を考慮して統計検定量$T$は以下のように計算される．
+\begin{displaymath}
+  \begin{split}
+  \label{z_a_b}
+  T&=\sqrt{1800-3}\left(\frac{1}{2}\ln{\frac{1-0.549}{1+0.549}-\frac{1}{2}\ln{\frac{1-0.419}{1+0.419}}}\right)\\
+  &=7.23\\
+  \end{split}
+\end{displaymath}
+$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=7.23>1.96$なので，帰無仮説を棄却する．よって，MIoM SCAINとUIoM SCAIN (action)の欲求推定における相関に差があると言える．
+
+\par
+最後に，MIoM SCAINとUIoM SCAIN (utterance)の欲求推定における相関に差があるかを調べる．以下のように仮説を設定する．
+\begin{displaymath}
+  \begin{split}
+  \label{z_a_b}
+  \mathrm{帰無仮説：MIoM\; SCAINとUIoM\; SCAIN\; (utterance)の欲求推定の相関に差がない}\\
+  \mathrm{対立仮説：MIoM\; SCAINとUIoM\; SCAIN\; (utterance)の欲求推定の相関に差がある}\\
+  \end{split}
+\end{displaymath}
+また，データ数を考慮して統計検定量$T$は以下のように計算される．
+\begin{displaymath}
+  \begin{split}
+  \label{z_a_b}
+  T&=\sqrt{1800-3}\left(\frac{1}{2}\ln{\frac{1-0.549}{1+0.549}-\frac{1}{2}\ln{\frac{1-0.494}{1+0.494}}}\right)\\
+  &=3.20\\
+  \end{split}
+\end{displaymath}
+$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=3.20>1.96$なので，帰無仮説を棄却する．よって，MIoM SCAINとUIoM SCAIN (utterance)の欲求推定における相関に差があると言える．

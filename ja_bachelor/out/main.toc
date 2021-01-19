@@ -12,10 +12,10 @@
 \contentsline {section}{\numberline {4.1}実験設定}{13}%
 \contentsline {section}{\numberline {4.2}実験手順}{13}%
 \contentsline {section}{\numberline {4.3}実験結果}{17}%
-\contentsline {chapter}{\numberline {5}考察}{18}%
-\contentsline {chapter}{\numberline {6}今後の課題}{20}%
-\contentsline {section}{\numberline {6.1}実世界情報による心的状態の推定}{20}%
-\contentsline {section}{\numberline {6.2}発話情報の検討}{20}%
-\contentsline {section}{\numberline {6.3}対話相手の発話に対する応答生成}{21}%
-\contentsline {chapter}{\numberline {7}結論}{23}%
-\contentsline {chapter}{謝辞}{24}%
+\contentsline {chapter}{\numberline {5}考察}{20}%
+\contentsline {chapter}{\numberline {6}今後の課題}{22}%
+\contentsline {section}{\numberline {6.1}実世界情報による心的状態の推定}{22}%
+\contentsline {section}{\numberline {6.2}発話情報の検討}{22}%
+\contentsline {section}{\numberline {6.3}対話相手の発話に対する応答生成}{23}%
+\contentsline {chapter}{\numberline {7}結論}{25}%
+\contentsline {chapter}{謝辞}{26}%
