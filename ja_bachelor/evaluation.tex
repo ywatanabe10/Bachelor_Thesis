@@ -101,6 +101,18 @@ BToMによる信念および欲求の推定を評価するための実験を参�
 \end{center}
 \end{table}
 
+\begin{table}[htb]
+  \begin{center}
+  \label{tab:cof}
+  \begin{tabular}{ll} \hline
+    推定システム&推定に用いる情報\\\hline
+    UIoM SCAIN (action)&行動情報のみ\\
+    UIoM SCAIN (utterance)&発話情報のみ\\
+    MIoM SCAIN (action + utterance)&行動情報と発話情報\\\hline
+  \end{tabular}
+\end{center}
+\end{table}
+
 \par
 表\ref{tab:cof}より，いずれの推定システムにおいても欲求推定の相関が信念推定の相関よりも強いことがわかった．
 
@@ -123,7 +135,7 @@ BToMによる信念および欲求の推定を評価するための実験を参�
 \begin{displaymath}
   \begin{split}
   \label{z_a_b}
-  T&=\sqrt{960-3}\left(\frac{1}{2}\ln{\frac{1-0.244}{1+0.244}-\frac{1}{2}\ln{\frac{1-0.124}{1+0.124}}}\right)\\
+  T&=\sqrt{960-3}\left(\frac{1}{2}\ln{\frac{1+0.244}{1-0.244}-\frac{1}{2}\ln{\frac{1+0.124}{1-0.124}}}\right)\\
   &=3.85\\
   \end{split}
 \end{displaymath}
@@ -142,7 +154,7 @@ $\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$で
 \begin{displaymath}
   \begin{split}
   \label{z_a_b}
-  T&=\sqrt{960-3}\left(\frac{1}{2}\ln{\frac{1-0.244}{1+0.244}-\frac{1}{2}\ln{\frac{1-0.216}{1+0.216}}}\right)\\
+  T&=\sqrt{960-3}\left(\frac{1}{2}\ln{\frac{1+0.244}{1-0.244}-\frac{1}{2}\ln{\frac{1+0.216}{1-0.216}}}\right)\\
   &=0.914\\
   \end{split}
 \end{displaymath}
@@ -161,7 +173,7 @@ $\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$で
 \begin{displaymath}
   \begin{split}
   \label{z_a_b}
-  T&=\sqrt{1800-3}\left(\frac{1}{2}\ln{\frac{1-0.549}{1+0.549}-\frac{1}{2}\ln{\frac{1-0.419}{1+0.419}}}\right)\\
+  T&=\sqrt{1800-3}\left(\frac{1}{2}\ln{\frac{1+0.549}{1-0.549}-\frac{1}{2}\ln{\frac{1+0.419}{1-0.419}}}\right)\\
   &=7.23\\
   \end{split}
 \end{displaymath}
@@ -180,7 +192,7 @@ $\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$で
 \begin{displaymath}
   \begin{split}
   \label{z_a_b}
-  T&=\sqrt{1800-3}\left(\frac{1}{2}\ln{\frac{1-0.549}{1+0.549}-\frac{1}{2}\ln{\frac{1-0.494}{1+0.494}}}\right)\\
+  T&=\sqrt{1800-3}\left(\frac{1}{2}\ln{\frac{1+0.549}{1-0.549}-\frac{1}{2}\ln{\frac{1+0.494}{1-0.494}}}\right)\\
   &=3.20\\
   \end{split}
 \end{displaymath}
