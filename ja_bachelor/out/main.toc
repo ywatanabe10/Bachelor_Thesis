@@ -3,7 +3,7 @@
 \contentsline {section}{\numberline {2.1}行動情報から心的状態を推定する研究}{4}%
 \contentsline {section}{\numberline {2.2}言語情報から心的状態を推定する研究}{6}%
 \contentsline {section}{\numberline {2.3}SCAIN}{6}%
-\contentsline {section}{\numberline {2.4}関連研究における心的状態推定の問題点}{7}%
+\contentsline {section}{\numberline {2.4}関連研究における心的状態推定の問題点}{6}%
 \contentsline {section}{\numberline {2.5}MIoM SCAINと関連研究との相違点}{7}%
 \contentsline {chapter}{\numberline {3}Multimodal Inference of Mind SCAIN}{8}%
 \contentsline {section}{\numberline {3.1}アルゴリズム}{8}%

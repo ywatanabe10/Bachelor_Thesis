@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  20 JAN 2021 18:55
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  20 JAN 2021 23:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -383,12 +383,7 @@ File: ./bt1.pdf Graphic file (type pdf)
 ]
 File: ./miom.pdf Graphic file (type pdf)
 <./miom.pdf>
-[9] [10])
-Overfull \hbox (25.88956pt too wide) in paragraph at lines 56--76
-[]\OT1/cmr/m/n/12 MIoM SCAIN \JY1/mc/m/sl/12 では ， 各時刻における $\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 b[]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 b[]; o[]\OT1/cmr/m/n/12 )$\JY1/mc/m/sl/12 ， $\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 o[]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 s[]\OT1/cmr/m/n/12 )$\JY1/mc/m/sl/12 ， $\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s[]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 s[]; a[]\OT1/cmr/m/n/12 )$\JY1/mc/m/sl/12 ， $\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a[]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 b[]; d[]\OT1/cmr/m/n/12 )$
- []
-
-[11]
+[9] [10]) [11]
 \openout2 = `evaluation.aux'.
 
 (./evaluation.tex
@@ -457,12 +452,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2753 strings out of 481140
- 36746 string characters out of 5917416
- 298246 words of memory out of 5000000
- 18665 multiletter control sequences out of 15000+600000
+ 2755 strings out of 481140
+ 36764 string characters out of 5917416
+ 298268 words of memory out of 5000000
+ 18667 multiletter control sequences out of 15000+600000
  548324 words of font info for 87 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  30i,21n,26p,1027b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/main.dvi (32 pages, 96416 bytes).
+Output written on out/main.dvi (32 pages, 98408 bytes).
