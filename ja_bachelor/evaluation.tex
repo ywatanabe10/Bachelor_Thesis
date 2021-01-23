@@ -1,6 +1,6 @@
 \chapter{評価}
 \par
-行動情報と発話情報の両方を反映した心的状態の推定が有効であることを示すため，信念および欲求の推定において，MIoM SCAINと単一情報による心的状態推定システムUnimodal Inference of Mind SCAIN (UIoM SCAIN)を比較する．行動情報と発話情報には，本研究で作成したデータセットを利用する．
+行動情報と発話情報の両方を反映した信念と欲求の推定が有効であることを示すため，MIoM SCAINと単一情報による信念と欲求の推定システムUnimodal Inference of Mind SCAIN (UIoM SCAIN)の推定精度を比較する．行動情報と発話情報には，本研究で作成したデータセットを利用する．
 
 
 \section{実験設定}
@@ -34,7 +34,7 @@ BToMによる信念および欲求の推定を評価するための実験を参�
   \end{tabular}
 \end{center}
 \end{table}
-本実験では，一定時間パーティクルの尤度に大きな変化がない時およびTruck1を通り過ぎた時に質問を提示した．MIoM SCAINによって行動情報と発話情報の両方を推定に活用することが有効であることを評価するために，パーティクルフィルタを用い行動情報と発話情報の一方のみを基に心的状態を推定するシステムUnimodal Inference of Mind SCAIN (UIoM SCAIN)を定義した．
+本実験では，一定時間パーティクルの尤度に大きな変化がない時およびTruck1を通り過ぎた時に質問を提示した．MIoM SCAINによって行動情報と発話情報の両方を信念と欲求の推定に活用することが有効であることを評価するために，パーティクルフィルタを用い行動情報と発話情報の一方のみを基に信念と欲求を推定するシステムUnimodal Inference of Mind SCAIN (UIoM SCAIN)を定義した．
 
 
 \par
@@ -96,7 +96,7 @@ BToMによる信念および欲求の推定を評価するための実験を参�
     & \hspace{10pt} 信念 \hspace{10pt} & \hspace{10pt} 欲求 \hspace{10pt} \\ \hline
     UIoM SCAIN (action)&0.124&0.419\\
     UIoM SCAIN (utterance)&0.216&0.494\\
-    MIoM SCAIN (action + utterance)&\bf0.244&\bf0.549 \\\hline
+    MIoM SCAIN (action + utterance)&\bf0.244&\bf0.550 \\\hline
   \end{tabular}
 \end{center}
 \end{table}
