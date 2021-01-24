@@ -1,5 +1,5 @@
 \addvspace {10pt}
-\contentsline {figure}{\numberline {1.1}{\ignorespaces 心的状態の推定．人間が食事をとるために飲食店に向かう場面において，3通りの条件で心的状態を推定する．図の左側は，行動情報のみを活用して心的状態を推定した場合，図の中央は発話情報のみを活用して心的状態を推定した場合，図の右側は行動情報と発話情報の両方を活用して心的状態を推定した場合を表す．}}{2}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces 行動と発話の相互作用を考慮した心的状態の推定}}{2}%
 \addvspace {10pt}
 \contentsline {figure}{\numberline {2.1}{\ignorespaces BToMにおけるベイズ推論の様子．$s_t, a_t$は観測値，$o_t, b_t, d$は確率変数として扱う．}}{4}%
 \addvspace {10pt}
