@@ -65,7 +65,7 @@ BToMによる信念および欲求の推定を評価するための実験を参�
   d(\mathrm{Chinese})= \sum_{\substack{k\\d^k=\mathrm{Chinese}}} \frac{7}{3}\cdot L^k \cdot rank^k({\mathrm{Chinese}})\\
   \end{split}
 \end{equation}
-ここで，$rank^k(\mathrm{food})$は，パーティクル$k$における欲求$d_k$を基に$\mathrm{food}$をどの程度好むかを3段階で表した値である．式（\ref{b_transform}）および式（\ref{d_transform}）において，尤度が最大のパーティクルのみを用いて信念や欲求を推定することをせずに，全てのパーティクルを考慮して計算を行っているのは，各パーティクルの尤度に差がない場合に対応するためである．推定を行った全タイミングで，信念推定および欲求推定のそれぞれについて，実験参加者による推定結果とMIoM SCAINおよびUIoM SCAINによる推定結果を比較し，相関係数を算出した．UIoM SCAIN (action)およびUIoM SCAIN (utterance)の尤度は，それぞれ式（\ref{uiom_a}），式（\ref{uiom_u}）で計算した．それぞれのモデルについて，信念または欲求の推定における相関係数を指標に，式（\ref{calc_a}）における$cost$の計算に用いる報酬や，式（\ref{calc_u}）における関数similarityにおけるパラメータを設定した．
+ここで，$rank^k(\mathrm{food})$は，パーティクル$k$における欲求$d_k$を基に$\mathrm{food}$をどの程度好むかを3段階で表した値である．式（\ref{b_transform}）および式（\ref{d_transform}）において，尤度が最大のパーティクルのみを用いて信念や欲求を推定することをせずに，全てのパーティクルを考慮して計算を行っているのは，各パーティクルの尤度に差がない場合に対応するためである．推定を行った全タイミングで，信念推定および欲求推定のそれぞれについて，実験参加者による推定結果とMIoM SCAINおよびUIoM SCAINによる推定結果を比較し，相関係数を算出した．UIoM SCAIN (action)およびUIoM SCAIN (utterance)の尤度は，それぞれ式（\ref{uiom_a}），式（\ref{uiom_u}）で計算した．それぞれのシステムについて，信念または欲求の推定における相関係数を指標に，式（\ref{calc_a}）における$cost$の計算に用いる報酬や，式（\ref{calc_u}）における関数similarityにおけるパラメータを設定した．
 \begin{equation}
   \begin{split}
   \label{uiom_a}
@@ -94,9 +94,9 @@ BToMによる信念および欲求の推定を評価するための実験を参�
   \begin{tabular}{lcc} \hline
     \multirow{2}{*}{モデル}&\multicolumn{2}{c}{相関}\\\cline{2-3}
     & \hspace{10pt} 信念 \hspace{10pt} & \hspace{10pt} 欲求 \hspace{10pt} \\ \hline
-    UIoM SCAIN (action)&0.124&0.419\\
+    UIoM SCAIN (action)&0.139&0.423\\
     UIoM SCAIN (utterance)&0.216&0.494\\
-    MIoM SCAIN (action + utterance)&\bf0.244&\bf0.550 \\\hline
+    MIoM SCAIN (action + utterance)&\bf0.272&\bf0.550 \\\hline
   \end{tabular}
 \end{center}
 \end{table}
@@ -124,11 +124,11 @@ BToMによる信念および欲求の推定を評価するための実験を参�
 \begin{displaymath}
   \begin{split}
   \label{z_a_b}
-  T&=\sqrt{960-3}\left(\frac{1}{2}\ln{\frac{1+0.244}{1-0.244}-\frac{1}{2}\ln{\frac{1+0.124}{1-0.124}}}\right)\\
-  &=3.85\\
+  T&=\sqrt{960-3}\left(\frac{1}{2}\ln{\frac{1+0.272}{1-0.272}-\frac{1}{2}\ln{\frac{1+0.139}{1-0.139}}}\right)\\
+  &=4.30\\
   \end{split}
 \end{displaymath}
-$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=3.85>1.96$なので，帰無仮説を棄却する．よって，MIoM SCAINとUIoM SCAIN (action)の信念推定における相関に差があると言える．
+$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=4.30>1.96$なので，帰無仮説を棄却する．よって，MIoM SCAINとUIoM SCAIN (action)の信念推定における相関に差があると言える．
 
 \par
 次に，MIoM SCAINとUIoM SCAIN (utterance)の信念推定における相関に差があるかを調べる．以下のように仮説を設定する．
@@ -143,11 +143,11 @@ $\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$で
 \begin{displaymath}
   \begin{split}
   \label{z_a_b}
-  T&=\sqrt{960-3}\left(\frac{1}{2}\ln{\frac{1+0.244}{1-0.244}-\frac{1}{2}\ln{\frac{1+0.216}{1-0.216}}}\right)\\
-  &=0.914\\
+  T&=\sqrt{960-3}\left(\frac{1}{2}\ln{\frac{1+0.272}{1-0.272}-\frac{1}{2}\ln{\frac{1+0.216}{1-0.216}}}\right)\\
+  &=1.84\\
   \end{split}
 \end{displaymath}
-$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=0.914<1.96$なので，帰無仮説を棄却しない．よって，MIoM SCAINとUIoM SCAIN (utterance)の信念推定における相関に差があるとは言えない．
+$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=1.84<1.96$なので，帰無仮説を棄却しない．よって，MIoM SCAINとUIoM SCAIN (utterance)の信念推定における相関に差があるとは言えない．
 
 \par
 次に，MIoM SCAINとUIoM SCAIN (action)の欲求推定における相関に差があるかを調べる．以下のように仮説を設定する．
@@ -162,11 +162,11 @@ $\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$で
 \begin{displaymath}
   \begin{split}
   \label{z_a_b}
-  T&=\sqrt{1800-3}\left(\frac{1}{2}\ln{\frac{1+0.549}{1-0.549}-\frac{1}{2}\ln{\frac{1+0.419}{1-0.419}}}\right)\\
-  &=7.23\\
+  T&=\sqrt{1800-3}\left(\frac{1}{2}\ln{\frac{1+0.550}{1-0.550}-\frac{1}{2}\ln{\frac{1+0.423}{1-0.423}}}\right)\\
+  &=7.09\\
   \end{split}
 \end{displaymath}
-$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=7.23>1.96$なので，帰無仮説を棄却する．よって，MIoM SCAINとUIoM SCAIN (action)の欲求推定における相関に差があると言える．
+$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=7.09>1.96$なので，帰無仮説を棄却する．よって，MIoM SCAINとUIoM SCAIN (action)の欲求推定における相関に差があると言える．
 
 \par
 最後に，MIoM SCAINとUIoM SCAIN (utterance)の欲求推定における相関に差があるかを調べる．以下のように仮説を設定する．
@@ -181,11 +181,11 @@ $\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$で
 \begin{displaymath}
   \begin{split}
   \label{z_a_b}
-  T&=\sqrt{1800-3}\left(\frac{1}{2}\ln{\frac{1+0.549}{1-0.549}-\frac{1}{2}\ln{\frac{1+0.494}{1-0.494}}}\right)\\
-  &=3.20\\
+  T&=\sqrt{1800-3}\left(\frac{1}{2}\ln{\frac{1+0.550}{1-0.550}-\frac{1}{2}\ln{\frac{1+0.494}{1-0.494}}}\right)\\
+  &=3.26\\
   \end{split}
 \end{displaymath}
-$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=3.20>1.96$なので，帰無仮説を棄却する．よって，MIoM SCAINとUIoM SCAIN (utterance)の欲求推定における相関に差があると言える．
+$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=3.26>1.96$なので，帰無仮説を棄却する．よって，MIoM SCAINとUIoM SCAIN (utterance)の欲求推定における相関に差があると言える．
 
 \begin{table}[htb]
   \begin{center}
