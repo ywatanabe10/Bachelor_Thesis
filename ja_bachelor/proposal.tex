@@ -85,7 +85,7 @@ $P(a_{t-1}|b_{t-1}^k,d^k)$は，式（\ref{calc_cost}）によって計算され
   P(a_{t-1}|b_{t-1}^k,d^k)=\mathrm{softmax}(cost,\delta)
   \end{split}
 \end{equation}
-$P(u_{t-1}|b_{t-1}^k,d^k)$は，式（\ref{calc_u}）により計算される．ここで，関数similarityはWord2Vec \cite{mikolov2013efficient}により発話$u_t$を分散表現に変換した後，信念$b_{t-1}^k$と欲求$d^k$との類似度を計算する関数である．$\alpha$は$\mathrm{similarity}(u_{t-1},b_{t-1}^k)$の大きさを調整する変数，$\beta$は欲求$d^k$の強さに基づき，$\mathrm{similarity}(u_{t-1},d^k)$の大きさを調整する変数である．
+$P(u_{t-1}|b_{t-1}^k,d^k)$は，式（\ref{calc_u}）により計算される．ここで，関数similarityはWord2Vec \cite{mikolov2013efficient}により発話$u_t$を分散表現に変換した後，信念$b_{t-1}^k$と欲求$d^k$との類似度を計算する関数である．$\alpha$は$\mathrm{similarity}(u_{t-1},b_{t-1}^k)$の大きさを調整する変数，$\beta$は欲求$d^k$の強さに基づき，$\mathrm{similarity}(u_{t-1},b_{t-1}^k)$の大きさを調整する変数である．
 \begin{equation}
   \begin{split}
   \label{calc_u}
