@@ -65,7 +65,7 @@ BToMによる信念および欲求の推定を評価するための実験を参�
   d(\mathrm{Chinese})= \sum_{\substack{k\\d^k=\mathrm{Chinese}}} \frac{7}{3}\cdot L^k \cdot rank^k({\mathrm{Chinese}})\\
   \end{split}
 \end{equation}
-ここで，$rank^k(\mathrm{food})$は，パーティクル$k$における欲求$d_k$を基に$\mathrm{food}$をどの程度好むかを3段階で表した値である．式（\ref{b_transform}）および式（\ref{d_transform}）において，尤度が最大のパーティクルのみを用いて信念や欲求を推定することをせずに，全てのパーティクルを考慮して計算を行っているのは，各パーティクルの尤度に差がない場合に対応するためである．推定を行った全タイミングで，信念推定および欲求推定のそれぞれについて，実験参加者による推定結果とMIoM SCAINおよびUIoM SCAINによる推定結果を比較し，相関係数を算出した．UIoM SCAIN (action)およびUIoM SCAIN (utterance)の尤度は，それぞれ式（\ref{uiom_a}），式（\ref{uiom_u}）で計算した．それぞれのシステムについて，信念または欲求の推定における相関係数を指標に，式（\ref{calc_a}）における$cost$の計算に用いる報酬や，式（\ref{calc_u}）における関数similarityにおけるパラメータを設定した．
+ここで，$rank^k(\mathrm{food})$は，パーティクル$k$における欲求$d_k$を基に$\mathrm{food}$をどの程度好むかを3段階で表した値である．式（\ref{b_transform}）および式（\ref{d_transform}）において，尤度が最大のパーティクルのみを用いて信念や欲求を推定することをせずに，全てのパーティクルを考慮して計算を行っているのは，各パーティクルの尤度に差がない場合に対応するためである．推定を行った全タイミングで，信念推定および欲求推定のそれぞれについて，実験参加者による推定結果とMIoM SCAINおよびUIoM SCAINによる推定結果を比較し，相関係数を算出した．UIoM SCAIN (action)およびUIoM SCAIN (utterance)の尤度は，それぞれ式（\ref{uiom_a}），式（\ref{uiom_u}）で計算した．表\ref{b_params}および表\ref{d_params}に示すように，それぞれのシステムについて，信念および欲求の推定における相関係数を指標に，式（\ref{calc_a}）における$cost$の計算に用いる報酬や，式（\ref{calc_u}）における関数similarityにおける変数を設定した．
 \begin{equation}
   \begin{split}
   \label{uiom_a}
@@ -82,6 +82,33 @@ BToMによる信念および欲求の推定を評価するための実験を参�
   \end{split}
 \end{equation}
 
+\begin{table}[htb]
+  \begin{center}
+  \caption{信念推定において本実験で用いた報酬および変数の値}
+  \label{b_params}
+  \begin{tabular}{lcccccccccc} \hline
+    \multirow{2}{*}{システム}&\multicolumn{9}{c}{変数}\\\cline{2-10}
+    & $r_1$& $r_2$&$r_3$&$\gamma$&$\delta$&$\alpha$&$\beta_1$&$\beta_2$&$\beta_3$\\ \hline
+    UIoM SCAIN (action)&115&50&5&0.85&1.0&-&-&-&-\\
+    UIoM SCAIN (utterance)&-&-&-&-&-&0.01&0.1&0.1&0.1\\
+    MIoM SCAIN (action + utterance)&115&50&5&0.85&1.0&0.10&10000&0.1&0\\\hline
+  \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[htb]
+  \begin{center}
+  \caption{欲求推定において本実験で用いた報酬および変数の値}
+  \label{d_params}
+  \begin{tabular}{lcccccccccc} \hline
+    \multirow{2}{*}{システム}&\multicolumn{9}{c}{変数}\\\cline{2-10}
+    & $r_1$& $r_2$&$r_3$&$\gamma$&$\delta$&$\alpha$&$\beta_1$&$\beta_2$&$\beta_3$\\ \hline
+    UIoM SCAIN (action)&150&50&5&0.85&0.25&-&-&-&-\\
+    UIoM SCAIN (utterance)&-&-&-&-&-&0.1&10000&0.1&0\\
+    MIoM SCAIN (action + utterance)&115&50&5&0.90&0.35&0.1&10000&0.1&0\\\hline
+  \end{tabular}
+\end{center}
+\end{table}
 
 \section{実験結果}
 
@@ -89,10 +116,10 @@ BToMによる信念および欲求の推定を評価するための実験を参�
 表\ref{tab:cof}に，実験参加者による信念と欲求の推定結果とUIoM SCAIN (action), UIoM SCAIN (utterance)およびMIoM SCAINによる信念と欲求の推定結果との間の相関係数を示す．
 \begin{table}[htb]
   \begin{center}
-  \caption{人間による推定と推定モデルの相関}
+  \caption{人間による推定と推定システムの相関}
   \label{tab:cof}
   \begin{tabular}{lcc} \hline
-    \multirow{2}{*}{モデル}&\multicolumn{2}{c}{相関}\\\cline{2-3}
+    \multirow{2}{*}{システム}&\multicolumn{2}{c}{相関}\\\cline{2-3}
     & \hspace{10pt} 信念 \hspace{10pt} & \hspace{10pt} 欲求 \hspace{10pt} \\ \hline
     UIoM SCAIN (action)&0.139&0.423\\
     UIoM SCAIN (utterance)&0.216&0.494\\
