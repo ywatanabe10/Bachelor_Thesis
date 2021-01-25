@@ -27,11 +27,11 @@ MIoM SCAINにおける推定処理の流れをを図\ref{fig:sys_arc}に示す�
 ここで，$u_{1:t-1}$は，時刻$1$から時刻$t-1$までの人間の発話履歴，$P(b_t,d|s_{1:t},a_{1:t-1},u_{1:t-1})$は，$s_{1:t},a_{1:t-1}およびu_{1:t-1}$から計算される$b_t$と$d$の確率である．
 
 \par
-図\ref{fig:miom}にMIoM SCAINにおけるマルコフ決定過程を示す．$s_t, a_t, u_t$は観測値，$o_t, b_t, d$は確率変数として扱う．
+図\ref{fig:miom}にMIoM SCAINにおけるベイズ推論を表現するベイジアンネットワークを示す．$s_t, a_t, u_t$は観測値，$o_t, b_t, d$は確率変数として扱う．
 \begin{figure}[htbp]
   \begin{center}
     \includegraphics[scale=0.73]{./miom.pdf}
-    \caption{MIoM SCAINにおけるマルコフ決定過程}
+    \caption{MIoM SCAINにおけるベイズ推論を表現するベイジアンネットワーク}
     \label{fig:miom}
   \end{center}
 \end{figure}
@@ -47,6 +47,8 @@ MIoM SCAINにおけるベイズ推論では，BToMと同様に時刻$t$におけ
   &\hspace{5cm} \cdot P(d^k,s_{1:t},a_{1:t-1},u_{1:t-1},b_{t-1}^k)\\
   &= \sum_{b_{t-1}^k,o_t}P(b_t^k|b_{t-1}^k,o_t)\cdot P(o_t|s_t)\cdot P(s_t|s_{t-1},a_{t-1})\\
   &\hspace{3cm} \cdot P(a_{t-1}|b_{t-1}^k,d^k)\cdot P(u_{t-1}|b_{t-1}^k,d^k)\cdot P(b_{t-1}^k,d^k,s_{1:t-1},a_{1:t-2},u_{1:t-2})\\
+  &\propto \sum_{b_{t-1}^k,o_t}P(b_t^k|b_{t-1}^k,o_t)\cdot P(o_t|s_t)\cdot P(s_t|s_{t-1},a_{t-1})\\
+  &\hspace{3cm} \cdot P(a_{t-1}|b_{t-1}^k,d^k)\cdot P(u_{t-1}|b_{t-1}^k,d^k)\cdot P(b_{t-1}^k,d^k|s_{1:t-1},a_{1:t-2},u_{1:t-2})\\
   \end{split}
 \end{equation}
 ここで，$P(b_t^k|b_{t-1}^k,o_t)$は人間の観測状況$o_t$によってパーティクル$k$の信念$b_t^k$が更新される確率，$P(o_t|s_t)$は環境の状態$s_t$において人間が観測状況$o_t$を得る確率，$P(s_t|s_{t-1},a_{t-1})$は環境の状態$s_{t-1}$において人間が行動$a_{t-1}$を起こした時に環境の状態が$s_{t}$になる確率，$P(a_{t-1}|b_{t-1}^k,d^k)$はパーティクル$k$が信念$b_{t-1}^k$，欲求$d^k$を持っている時に行動$a_{t-1}$を起こす確率，$P(u_{t-1}|b_{t-1}^k,d^k)$はパーティクル$k$が信念$b_{t-1}^k$，欲求$d^k$を持っている時に発話$u_t$を起こす確率，$P(b_{t-1}^k,d^k,s_{1:t-1},a_{1:t-2},u_{1:t-2})$は時刻$t-1$におけるパーティクル$k$の尤度である．式（\ref{eq_miom}）より，$L^k$は初期値$P(b_1,d,s_1,a_0,u_0)$を決めて順次更新する計算により求めることができる．また，$L^k$は$P(b_t^k|b_{t-1}^k,o_t)$，$P(o_t|s_t)$，$P(s_t|s_{t-1},a_{t-1})$，$P(a_{t-1}|b_{t-1}^k,d^k)$および$(u_{t-1}|b_{t-1}^k,d^k)$の乗算として表すことができる．
