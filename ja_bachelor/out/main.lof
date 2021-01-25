@@ -1,12 +1,12 @@
 \addvspace {10pt}
-\contentsline {figure}{\numberline {1.1}{\ignorespaces 行動と発話の相互作用を考慮した心的状態の推定}}{2}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces 行動情報と発話情報の相互作用を考慮した心的状態の推定}}{2}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces BToMにおけるベイズ推論の様子．$s_t, a_t$は観測値，$o_t, b_t, d$は確率変数として扱う．}}{4}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces BToMにおけるマルコフ決定過程}}{4}%
 \addvspace {10pt}
 \contentsline {figure}{\numberline {3.1}{\ignorespaces MIoM SCAINによる推定処理}}{9}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces MIoM SCAINにおけるベイズ推定．$s_t, a_t, u_t$は観測値，$o_t, b_t, d$は確率変数として扱う．}}{10}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces MIoM SCAINにおけるマルコフ決定過程}}{10}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 本実験における環境．図中の``Student''は学生，``Truck1''および``Truck2''は屋台を開くスペース，中央の黒色部分は壁を表す．}}{13}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 本実験における環境}}{13}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces 本実験に使用したインターフェース}}{15}%
 \addvspace {10pt}
 \contentsline {figure}{\numberline {5.1}{\ignorespaces 学生がTruck1を通過した場面}}{20}%

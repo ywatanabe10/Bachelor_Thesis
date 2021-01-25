@@ -27,11 +27,11 @@ MIoM SCAINにおける推定処理の流れをを図\ref{fig:sys_arc}に示す�
 ここで，$u_{1:t-1}$は，時刻$1$から時刻$t-1$までの人間の発話履歴，$P(b_t,d|s_{1:t},a_{1:t-1},u_{1:t-1})$は，$s_{1:t},a_{1:t-1}およびu_{1:t-1}$から計算される$b_t$と$d$の確率である．
 
 \par
-図\ref{fig:miom}にMIoM SCAINにおけるベイズ推論の様子を示す．
+図\ref{fig:miom}にMIoM SCAINにおけるマルコフ決定過程を示す．$s_t, a_t, u_t$は観測値，$o_t, b_t, d$は確率変数として扱う．
 \begin{figure}[htbp]
   \begin{center}
     \includegraphics[scale=0.73]{./miom.pdf}
-    \caption{MIoM SCAINにおけるベイズ推定．$s_t, a_t, u_t$は観測値，$o_t, b_t, d$は確率変数として扱う．}
+    \caption{MIoM SCAINにおけるマルコフ決定過程}
     \label{fig:miom}
   \end{center}
 \end{figure}
