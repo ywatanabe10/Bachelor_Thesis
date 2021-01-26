@@ -104,4 +104,4 @@ MIoM SCAINでは，式（\ref{eq_miom}）に示すように各パーティクル
   P(u_{t-1}|b_{t-1}^k,d^k)\propto \sum_{i=1}^n(\alpha+\beta_p)\cdot\mathrm{similarity}(u_{t-1},g_i)
   \end{split}
 \end{equation}
-ここで，$g_i$は信念$b_{t-1}^k$または欲求$d^k$になり得る環境中の対象物，関数$\mathrm{similarity}(u_{t-1},g_i)$は発話$u_{t-1}$および環境中の対象物$g_i$を入力とし，Word2Vec \cite{mikolov2013efficient}により発話$u_{t-1}$を分散表現に変換した後，信念$b_{t-1}^k$または欲求$d^k$になり得る環境中の対象物$g_i$との類似度を出力する関数，$\alpha$は環境中の対象物$g$が信念$b_{t-1}^k$にあたる場合において$\mathrm{similarity}(u_{t-1},g_i)$の出力の大きさを調整する変数，$\beta_p$は環境中の対象物$g_i$が欲求$d^k$の$p$番目に強い欲求にあたる場合において$\mathrm{similarity}(u_{t-1},g_i)$の出力の大きさを調整する変数，$n$は環境中に存在する対象物$g_i$の数である．
+ここで，$g_i$は信念$b_{t-1}^k$または欲求$d^k$になり得る環境中の対象物，関数$\mathrm{similarity}(u_{t-1},g_i)$は発話$u_{t-1}$および環境中の対象物$g_i$を入力とし，Word2Vec \cite{mikolov2013efficient}により発話$u_{t-1}$を分散表現に変換した後，信念$b_{t-1}^k$または欲求$d^k$になり得る環境中の対象物$g_i$との類似度を出力する関数，$\alpha$は環境中の対象物$g$が信念$b_{t-1}^k$にあたる場合において$\mathrm{similarity}(u_{t-1},g_i)$の出力の大きさを調整する変数，$\beta_p$は環境中の対象物$g_i$が欲求$d^k$の$p$番目に強い欲求にあたる場合において$\mathrm{similarity}(u_{t-1},g_i)$の出力の大きさを調整する変数，$n$は環境中に存在する対象物$g_i$の数を表す．
