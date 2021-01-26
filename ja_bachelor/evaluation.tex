@@ -1,11 +1,11 @@
 \chapter{評価}
 \par
-行動情報と発話情報の両方を反映した信念と欲求の推定精度の向上に有効であることを示すため，MIoM SCAINと単一情報による信念と欲求の推定システムUnimodal Inference of Mind SCAIN (UIoM SCAIN)の推定精度を比較する．行動情報と発話情報には，本研究で作成したデータセットを利用する．
+行動情報と発話情報の両方を反映した信念と欲求の推定精度の向上に有効であることを示すため，MIoM SCAINと単一情報による信念と欲求の推定システムUnimodal Inference of Mind SCAIN (UIoM SCAIN)の推定精度を比較した．行動情報と発話情報には，本研究で作成したデータセットを利用した．
 
 
 \section{実験設定}
 \par
-BToMによる信念および欲求の推定を評価するための実験を参考に，学生がアシストロボットとともに屋台で食事を買うシーンを想定する．図\ref{fig:ex_env1}に本実験における環境の一例を示す．ここで，図\ref{fig:ex_env1}における``Student''は学生，``Truck1''および``Truck2''は屋台を開くスペース，中央の黒色部分は壁を表す．
+BToMによる信念および欲求の推定を評価するための実験を参考に，学生がアシストロボットとともに屋台で食事を買うシーンを想定した．図\ref{fig:ex_env1}に本実験における環境の一例を示す．ここで，図\ref{fig:ex_env1}における``Student''は学生，``Truck1''および``Truck2''は屋台を開くスペース，中央の黒色部分は壁を表す．
 \begin{figure}[htbp]
   \begin{center}
     \includegraphics[scale=0.7]{./ex_env1.pdf}
@@ -15,7 +15,7 @@ BToMによる信念および欲求の推定を評価するための実験を参�
 \end{figure}
 7$\times$5マスで表現される環境中に壁とTruck1およびTruck2で表される屋台を開くスペースが存在し，それぞれのスペースに日本食を提供する屋台，イタリア料理を提供する屋台，中華料理を提供する屋台のいずれかが出店する．環境中の学生は移動し，アシストロボットと対話をしながら食事を購入する屋台を決める状況を考える．学生は，日本食を提供する屋台，イタリア料理を提供する屋台，中華料理を提供する屋台の3種類のうち2種類が出店することは知っているが，どの屋台が出店しているかは知らないため，環境中を移動しアシストロボットと対話しながら食事を買う屋台を選ぶ．
 \par
-学生の行動$a_t$は上，下，左，右の4方向への移動とし，発話$u_t$はアシストロボットから提示される食事に関する質問に対する学生の応答とする．信念$b_t$は，壁により観測できていない屋台に関してどの屋台が出店していると考えているか，欲求$d$は学生が3種類のそれぞれの屋台をどの程度好むかを表す．また本実験設定に基づき，式（\ref{calc_a}）における予測報酬$Q_{t-1}$を式（\ref{calc_q}）により表す．
+学生の行動$a_t$は上，下，左，右の4方向への移動とし，発話$u_t$はアシストロボットから提示される食事に関する質問に対する学生の応答とした．信念$b_t$は，壁により観測できていない屋台に関してどの屋台が出店していると考えているか，欲求$d$は学生が3種類のそれぞれの屋台をどの程度好むかとして表現した．また本実験設定に基づき，式（\ref{calc_a}）における予測報酬$Q_{t-1}$を式（\ref{calc_q}）により表現した．
 \begin{equation}
   \begin{split}
   \label{calc_q}
@@ -23,7 +23,35 @@ BToMによる信念および欲求の推定を評価するための実験を参�
   \end{split}
 \end{equation}
 ここで，$r_p$は信念$b_{t}$が欲求$d$の$p$番目に強い欲求にあたる場合における報酬，関数$\mathrm{x}(a_{t-1})$は時刻$a_{t-1}$を入力とし，行動$a_{t-1}$を起こした場合における学生の位置と信念$b_{t}$として持つ屋台との距離を出力する関数，$\gamma$は予測報酬$Q_{t-1}$への関数$\mathrm{x}(a_{t-1})$の出力の寄与を調整する変数である．また本実験設定では，欲求$d$は日本食を提供する屋台，イタリア料理を提供する屋台および中華料理を提供する屋台の3種類の欲求の程度を保持するため，$1<=p<=3$である．
+\par
+表\ref{b_params}および表\ref{d_params}に示すように，それぞれのシステムについて，信念および欲求の推定における相関係数を指標に，式（\ref{calc_q}）における報酬$r_p$や変数$\gamma$および式（\ref{calc_a}）における変数$\delta$，また式（\ref{calc_u}）における変数$\alpha$および変数$\beta_p$を設定した．
+\begin{table}[htb]
+  \begin{center}
+  \caption{信念推定において本実験で用いた報酬および変数の値}
+  \label{b_params}
+  \begin{tabular}{lcccccccccc} \hline
+    \multirow{2}{*}{システム}&\multicolumn{9}{c}{変数}\\\cline{2-10}
+    & $r_1$& $r_2$&$r_3$&$\gamma$&$\delta$&$\alpha$&$\beta_1$&$\beta_2$&$\beta_3$\\ \hline
+    UIoM SCAIN (action)&115&50&5&0.85&1.0&-&-&-&-\\
+    UIoM SCAIN (utterance)&-&-&-&-&-&0.01&0.1&0.1&0.1\\
+    MIoM SCAIN (action + utterance)&115&50&5&0.85&1.0&0.10&10000&0.1&0\\\hline
+  \end{tabular}
+\end{center}
+\end{table}
 
+\begin{table}[htb]
+  \begin{center}
+  \caption{欲求推定において本実験で用いた報酬および変数の値}
+  \label{d_params}
+  \begin{tabular}{lcccccccccc} \hline
+    \multirow{2}{*}{システム}&\multicolumn{9}{c}{変数}\\\cline{2-10}
+    & $r_1$& $r_2$&$r_3$&$\gamma$&$\delta$&$\alpha$&$\beta_1$&$\beta_2$&$\beta_3$\\ \hline
+    UIoM SCAIN (action)&150&50&5&0.85&0.25&-&-&-&-\\
+    UIoM SCAIN (utterance)&-&-&-&-&-&0.1&10000&0.1&0\\
+    MIoM SCAIN (action + utterance)&115&50&5&0.90&0.35&0.1&10000&0.1&0\\\hline
+  \end{tabular}
+\end{center}
+\end{table}
 
 \section{実験手順}
 
@@ -73,7 +101,7 @@ BToMによる信念および欲求の推定を評価するための実験を参�
   d(\mathrm{Chinese})= \sum_{\substack{k\\d^k=\mathrm{Chinese}}} \frac{7}{3}\cdot L^k \cdot rank^k({\mathrm{Chinese}})\\
   \end{split}
 \end{equation}
-ここで，$rank^k(\mathrm{food})$は，パーティクル$k$における欲求$d_k$を基に$\mathrm{food}$をどの程度好むかを3段階で表した値である．式（\ref{b_transform}）および式（\ref{d_transform}）において，尤度が最大のパーティクルのみを用いて信念や欲求を推定することをせずに，全てのパーティクルを考慮して計算を行っているのは，各パーティクルの尤度に差がない場合に対応するためである．推定を行った全タイミングで，信念推定および欲求推定のそれぞれについて，実験参加者による推定結果とMIoM SCAINおよびUIoM SCAINによる推定結果を比較し，相関係数を算出した．UIoM SCAIN (action)およびUIoM SCAIN (utterance)の尤度は，それぞれ式（\ref{uiom_a}），式（\ref{uiom_u}）で計算した．表\ref{b_params}および表\ref{d_params}に示すように，それぞれのシステムについて，信念および欲求の推定における相関係数を指標に，式（\ref{calc_q}）における報酬$r_p$や変数$\gamma$および式（\ref{calc_a}）における変数$\delta$，また式（\ref{calc_u}）における変数$\alpha$および変数$\beta_p$を設定した．
+ここで，$rank^k(\mathrm{food})$は，パーティクル$k$における欲求$d_k$を基に$\mathrm{food}$をどの程度好むかを3段階で表した値である．式（\ref{b_transform}）および式（\ref{d_transform}）において，尤度が最大のパーティクルのみを用いて信念や欲求を推定することをせずに，全てのパーティクルを考慮して計算を行っているのは，各パーティクルの尤度に差がない場合に対応するためである．推定を行った全タイミングで，信念推定および欲求推定のそれぞれについて，実験参加者による推定結果とMIoM SCAINおよびUIoM SCAINによる推定結果を比較し，相関係数を算出した．UIoM SCAIN (action)およびUIoM SCAIN (utterance)の尤度は，それぞれ式（\ref{uiom_a}），式（\ref{uiom_u}）で計算した．
 \begin{equation}
   \begin{split}
   \label{uiom_a}
@@ -90,33 +118,6 @@ BToMによる信念および欲求の推定を評価するための実験を参�
   \end{split}
 \end{equation}
 
-\begin{table}[htb]
-  \begin{center}
-  \caption{信念推定において本実験で用いた報酬および変数の値}
-  \label{b_params}
-  \begin{tabular}{lcccccccccc} \hline
-    \multirow{2}{*}{システム}&\multicolumn{9}{c}{変数}\\\cline{2-10}
-    & $r_1$& $r_2$&$r_3$&$\gamma$&$\delta$&$\alpha$&$\beta_1$&$\beta_2$&$\beta_3$\\ \hline
-    UIoM SCAIN (action)&115&50&5&0.85&1.0&-&-&-&-\\
-    UIoM SCAIN (utterance)&-&-&-&-&-&0.01&0.1&0.1&0.1\\
-    MIoM SCAIN (action + utterance)&115&50&5&0.85&1.0&0.10&10000&0.1&0\\\hline
-  \end{tabular}
-\end{center}
-\end{table}
-
-\begin{table}[htb]
-  \begin{center}
-  \caption{欲求推定において本実験で用いた報酬および変数の値}
-  \label{d_params}
-  \begin{tabular}{lcccccccccc} \hline
-    \multirow{2}{*}{システム}&\multicolumn{9}{c}{変数}\\\cline{2-10}
-    & $r_1$& $r_2$&$r_3$&$\gamma$&$\delta$&$\alpha$&$\beta_1$&$\beta_2$&$\beta_3$\\ \hline
-    UIoM SCAIN (action)&150&50&5&0.85&0.25&-&-&-&-\\
-    UIoM SCAIN (utterance)&-&-&-&-&-&0.1&10000&0.1&0\\
-    MIoM SCAIN (action + utterance)&115&50&5&0.90&0.35&0.1&10000&0.1&0\\\hline
-  \end{tabular}
-\end{center}
-\end{table}
 
 \section{実験結果}
 
