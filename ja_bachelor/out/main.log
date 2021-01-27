@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  27 JAN 2021 11:36
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  27 JAN 2021 22:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -341,19 +341,19 @@ LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
 LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
 (Font)              using `JY1/gt/m/n' instead on input line 12.
 
-File: ./figure1.pdf Graphic file (type pdf)
-<./figure1.pdf>
 [1
 
 
 ]
+File: ./figure1.pdf Graphic file (type pdf)
+<./figure1.pdf>
 
 LaTeX Font Warning: Font shape `JT1/mc/m/sl' undefined
-(Font)              using `JT1/mc/m/n' instead on input line 38.
+(Font)              using `JT1/mc/m/n' instead on input line 40.
 
 
 LaTeX Font Warning: Font shape `JY1/mc/m/sl' undefined
-(Font)              using `JY1/mc/m/n' instead on input line 38.
+(Font)              using `JY1/mc/m/n' instead on input line 40.
 
 [2]) [3]
 \openout2 = `relatedwork.aux'.
@@ -434,12 +434,12 @@ File: ./ex_env2.pdf Graphic file (type pdf)
 
 
 ]
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 51.
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 59.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 51.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 59.
 ) [29] (out/main.aux (out/abstract.aux) (out/introduction.aux) (out/relatedwork.aux) (out/proposal.aux) (out/evaluation.aux) (out/discussion.aux) (out/futurework.aux) (out/conclusion.aux) (out/thanks.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -449,12 +449,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2761 strings out of 481140
- 36818 string characters out of 5917416
- 299334 words of memory out of 5000000
- 18673 multiletter control sequences out of 15000+600000
+ 2765 strings out of 481140
+ 36914 string characters out of 5917416
+ 299390 words of memory out of 5000000
+ 18677 multiletter control sequences out of 15000+600000
  548324 words of font info for 87 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 30i,21n,26p,985b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,21n,26p,1046b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/main.dvi (34 pages, 104644 bytes).
+Output written on out/main.dvi (34 pages, 106136 bytes).

@@ -1,10 +1,10 @@
 \addvspace {10pt}
 \contentsline {figure}{\numberline {1.1}{\ignorespaces 行動情報と発話情報の相互作用を考慮した心的状態の推定}}{2}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces BToMにおけるベイズ推論を表現するベイジアンネットワーク}}{4}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces BToMにおけるベイズ推定を表現するベイジアンネットワーク}}{5}%
 \addvspace {10pt}
 \contentsline {figure}{\numberline {3.1}{\ignorespaces MIoM SCAINによる推定処理}}{9}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces MIoM SCAINにおけるベイズ推論を表現するベイジアンネットワーク}}{10}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces MIoM SCAINにおけるベイズ推定を表現するベイジアンネットワーク}}{10}%
 \addvspace {10pt}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces 本実験における環境}}{14}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces 本実験に使用したインターフェース}}{16}%
