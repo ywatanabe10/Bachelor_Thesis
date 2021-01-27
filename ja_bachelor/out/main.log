@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  26 JAN 2021 16:11
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  27 JAN 2021 10:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -380,7 +380,10 @@ File: ./bt1.pdf Graphic file (type pdf)
 ]
 File: ./miom.pdf Graphic file (type pdf)
 <./miom.pdf>
-[9] [10] [11]) [12]
+[9]
+Overfull \vbox (28.75648pt too high) has occurred while \output is active []
+
+[10] [11]) [12]
 \openout2 = `evaluation.aux'.
 
 (./evaluation.tex
@@ -391,12 +394,7 @@ File: ./ex_env1.pdf Graphic file (type pdf)
 
 
 
-]
-Overfull \hbox (2.46727pt too wide) in paragraph at lines 32--39
- [] 
- []
-
-[14]
+] [14]
 File: ./interface.pdf Graphic file (type pdf)
 <./interface.pdf>
 [15] [16] [17] [18] [19]) [20]
@@ -462,4 +460,4 @@ Here is how much of TeX's memory you used:
  929 hyphenation exceptions out of 8191
  30i,21n,26p,985b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/main.dvi (34 pages, 103992 bytes).
+Output written on out/main.dvi (34 pages, 104496 bytes).
