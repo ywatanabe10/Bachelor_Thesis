@@ -51,8 +51,8 @@ MIoM SCAINにおけるベイズ推定では，BToMと同様に時刻$t$におけ
   &\hspace{3cm} \cdot P(a_{t-1}|b_{t-1}^k,d^k)\cdot P(u_{t-1}|b_{t-1}^k,d^k)\cdot P(b_{t-1}^k,d^k,s_{1:t-1},a_{1:t-2},u_{1:t-2})\\
   &\propto \sum_{b_{t-1}^k,o_t}P(b_t^k|b_{t-1}^k,o_t)\cdot P(o_t|s_t)\cdot P(s_t|s_{t-1},a_{t-1})\\
   &\hspace{3cm} \cdot P(a_{t-1}|b_{t-1}^k,d^k)\cdot P(u_{t-1}|b_{t-1}^k,d^k)\cdot P(b_{t-1}^k,d^k|s_{1:t-1},a_{1:t-2},u_{1:t-2})\\
-  &= P(b_t^k|b_{t-1}^k,o_t)\cdot P(o_t|s_t)\cdot P(s_t|s_{t-1},a_{t-1})\\
-  &\hspace{3cm} \cdot P(a_{t-1}|b_{t-1}^k,d^k)\cdot P(u_{t-1}|b_{t-1}^k,d^k)\cdot L^k_{t-1}+L^k_{t-1}\\
+  &= \sum_{b_{t-1}^k,o_t}P(b_t^k|b_{t-1}^k,o_t)\cdot P(o_t|s_t)\cdot P(s_t|s_{t-1},a_{t-1})\\
+  &\hspace{3cm} \cdot P(a_{t-1}|b_{t-1}^k,d^k)\cdot P(u_{t-1}|b_{t-1}^k,d^k)\cdot L^k_{t-1}\\
   \end{split}
 \end{equation}
 ここで，$P(b_t^k|b_{t-1}^k,o_t)$は人間の観測状況$o_t$によってパーティクル$k$の信念$b_t^k$が更新される確率，$P(o_t|s_t)$は環境の状態$s_t$において人間が観測状況$o_t$を得る確率，$P(s_t|s_{t-1},a_{t-1})$は環境の状態$s_{t-1}$において人間が行動$a_{t-1}$を起こした時に環境の状態が$s_{t}$になる確率，$P(a_{t-1}|b_{t-1}^k,d^k)$はパーティクル$k$が信念$b_{t-1}^k$，欲求$d^k$を持つ時に行動$a_{t-1}$を起こす確率，$P(u_{t-1}|b_{t-1}^k,d^k)$はパーティクル$k$が信念$b_{t-1}^k$，欲求$d^k$を持っている時に発話$u_t$を起こす確率，$L_{t-1}^k$は時刻$t-1$におけるパーティクル$k$の尤度である．式（\ref{eq_miom}）より，$L^k_t$は初期値$L^k_1$を決めて順次更新する計算により求めることができる．
@@ -108,4 +108,4 @@ MIoM SCAINでは，式（\ref{eq_miom}）により各パーティクルの尤度
   P(u_{t-1}|b_{t-1}^k,d^k)\propto \sum_{i=1}^n(\alpha+\beta_p)\cdot\mathrm{similarity}(u_{t-1},g_i)
   \end{split}
 \end{equation}
-ここで，$g_i$は信念$b_{t-1}^k$または欲求$d^k$になり得る環境中の対象物，関数$\mathrm{similarity}(u_{t-1},g_i)$は発話$u_{t-1}$および環境中の対象物$g_i$を入力とし，Word2Vec \cite{mikolov2013efficient}により発話$u_{t-1}$を分散表現に変換した後，信念$b_{t-1}^k$または欲求$d^k$になり得る環境中の対象物$g_i$との類似度を出力する関数，$\alpha$は環境中の対象物$g$が信念$b_{t-1}^k$にあたる場合において$\mathrm{similarity}(u_{t-1},g_i)$の出力の大きさを調整する定数，$\beta_p$は環境中の対象物$g_i$が欲求$d^k$の$p$番目に強い欲求にあたる場合において$\mathrm{similarity}(u_{t-1},g_i)$の出力の大きさを調整する定数，$n$は環境中に存在する対象物$g_i$の数を表す定数である．
+ここで，$g_i$は信念$b_{t-1}^k$または欲求$d^k$になり得る環境中の対象物，関数$\mathrm{similarity}(u_{t-1},g_i)$は発話$u_{t-1}$および環境中の対象物$g_i$を入力とし，Word2Vec \cite{mikolov2013efficient}により発話$u_{t-1}$を分散表現に変換した後，信念$b_{t-1}^k$または欲求$d^k$になり得る環境中の対象物$g_i$との類似度を出力する関数，$\alpha$は環境中の対象物$g$が信念$b_{t-1}^k$にあたる場合において関数$\mathrm{similarity}(u_{t-1},g_i)$の出力の大きさを調整する定数，$\beta_p$は環境中の対象物$g_i$が欲求$d^k$の$p$番目に強い欲求にあたる場合において関数$\mathrm{similarity}(u_{t-1},g_i)$の出力の大きさを調整する定数，$n$は環境中に存在する対象物$g_i$の数を表す定数である．
