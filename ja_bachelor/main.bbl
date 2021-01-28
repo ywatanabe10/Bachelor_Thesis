@@ -14,6 +14,13 @@ Amena Darwish, and H~Joe Steinhauer.
   Modeling Symposium, August 31-September 2, 2020}, Vol.~11, p.~51. IOS Press,
   2020.
 
+\bibitem[Farwell {\etalchar{et~al.}} 97]{farwell1997user}
+David Farwell, and Stephen Helmreich.
+\newblock User-friendly machine translation: Alternate translations based on
+  differing beliefs.
+\newblock {\em Proceedings of the MT Summit VI: Machine Translation: Past,
+  Present, Future}, Vol.~29, pp. 125--131, 1997.
+
 \bibitem[Mikolov {\etalchar{et~al.}} 13]{mikolov2013efficient}
 Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean.
 \newblock Efficient estimation of word representations in vector space.
