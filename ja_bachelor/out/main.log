@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  28 JAN 2021 17:11
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.23)  29 JAN 2021 10:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -282,13 +282,13 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
 
 (./abstract.tex
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <17.28> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 13.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 12.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 13.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 12.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <17.28> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 13.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 12.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 13.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 12.
 [1
 
 ])
@@ -459,10 +459,10 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  2766 strings out of 481140
  36931 string characters out of 5917416
- 299419 words of memory out of 5000000
+ 299421 words of memory out of 5000000
  18678 multiletter control sequences out of 15000+600000
  548324 words of font info for 87 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  30i,21n,26p,1046b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on out/main.dvi (35 pages, 107408 bytes).
+Output written on out/main.dvi (35 pages, 107460 bytes).
