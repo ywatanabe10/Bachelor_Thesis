@@ -1,6 +1,6 @@
 \chapter{評価}
 \par
-散策行動情報と人間の発話情報の両方を反映した信念と欲求の推定性能の向上に有効であることを示すため，MIoM SCAINと単一情報による信念と欲求の推定システムUnimodal Inference of Mind SCAIN (UIoM SCAIN)の推定性能を比較した．散策行動情報と人間の発話情報には，本研究で作成したデータセットを利用した．
+散策行動情報と人間の発話情報の両方を活用することが信念と欲求の推定性能の向上に有効であることを示すため，MIoM SCAINと単一情報による信念と欲求の推定システムUnimodal Inference of Mind SCAIN (UIoM SCAIN)の推定性能を比較した．散策行動情報と人間の発話情報には，本研究で作成したデータセットを利用した．
 
 
 \section{実験設定}
@@ -23,10 +23,33 @@ BToMによる信念および欲求の推定を評価するための実験を参�
   \end{split}
 \end{equation}
 ここで，$r_p$は信念$b_{t}$が欲求$d$の$p$番目に強い欲求にあたる場合における報酬，関数$\mathrm{x}(a_{t-1})$は散策行動$a_{t-1}$を入力とし，散策行動$a_{t-1}$を起こした場合における学生の位置と信念$b_{t}$として持つ屋台との距離を出力する関数，$\gamma$は予測報酬$Q_{t-1}$への関数$\mathrm{x}(a_{t-1})$の出力の寄与を調整する定数である．また本実験設定では，欲求$d$は日本食を提供する屋台，イタリア料理を提供する屋台および中華料理を提供する屋台の3種類の欲求の程度を保持するため，$1<=p<=3$である．
+
 \par
-表\ref{b_params}および表\ref{d_params}に示すように，それぞれのシステムについて，信念および欲求の推定における相関係数を指標に，式（\ref{calc_q}）における報酬$r_p$や定数$\gamma$および式（\ref{calc_a}）における定数$\delta$，また式（\ref{calc_u}）における定数$\alpha$および定数$\beta_p$を設定した．
+本実験には，本研究で作成したデータセットを利用した．本データセットには，屋台の組み合わせを表す環境設定と，その環境設定で考えられる学生の散策行動，アシストロボットからの質問，学生の応答が含まれる．屋台の組み合わせは日本食の屋台，イタリア料理の屋台，中華料理の屋台の2つの組み合わせとする6通り，学生の散策行動は上，下，左，右の4方向への移動，アシストロボットからの質問は表\ref{tab:q_a}の左側に記載される4通り，学生の応答は表\ref{tab:q_a}の右側に記載される8通りである．
 \begin{table}[htb]
   \begin{center}
+  \caption{アシストロボットからの質問と学生の応答}
+  \label{tab:q_a}
+  \begin{tabular}{ll} \hline
+    質問内容&応答内容\\\hline
+    \multirow{2}{*}{魚料理と野菜料理どちらを食べたいですか}&fish\\
+    &vegetable\\
+    \multirow{2}{*}{パスタと米ではどちらを食べたいですか}&pasta\\
+    &rice\\
+    \multirow{2}{*}{あっさりしたものと，こってりしたものどちらを食べたいですか}&plain\\
+    &oily\\
+    \multirow{2}{*}{辛いものと酸っぱいものではどちらを食べたいですか}&spicy\\
+    &sour\\\hline
+  \end{tabular}
+\end{center}
+\end{table}
+
+\par
+表\ref{b_params}および表\ref{d_params}に示すように，それぞれのシステムについて，信念推定および欲求推定において，式（\ref{calc_q}）における報酬$r_p$や定数$\gamma$および式（\ref{calc_a}）における定数$\delta$，また式（\ref{calc_u}）における定数$\alpha$および定数$\beta_p$を設定した．
+
+\begin{table}[htb]
+  \begin{center}
+  \belowcaptionskip=-15pt
   \caption{信念推定において本実験で用いた報酬および定数の値}
   \label{b_params}
   \begin{tabular}{lcccccccccc} \hline
@@ -53,27 +76,10 @@ BToMによる信念および欲求の推定を評価するための実験を参�
 \end{center}
 \end{table}
 
-\section{実験手順}
 
+
+\section{実験手順}
 \par
-本実験には，本研究で作成したデータセットを利用した．本データセットには，屋台の組み合わせを表す環境設定と，その環境設定で考えられる学生の散策行動，アシストロボットからの質問，学生の応答が含まれる．屋台の組み合わせは日本食の屋台，イタリア料理の屋台，中華料理の屋台の2つの組み合わせとする6通り，学生の散策行動は上，下，左，右の4方向への移動，アシストロボットからの質問は表\ref{tab:q_a}の左側に記載される4通り，学生の応答は表\ref{tab:q_a}の右側に記載される8通りである．
-\begin{table}[htb]
-  \begin{center}
-  \caption{アシストロボットからの質問と学生の応答}
-  \label{tab:q_a}
-  \begin{tabular}{ll} \hline
-    質問内容&応答内容\\\hline
-    \multirow{2}{*}{魚料理と野菜料理どちらを食べたいですか}&fish\\
-    &vegetable\\
-    \multirow{2}{*}{パスタと米ではどちらを食べたいですか}&pasta\\
-    &rice\\
-    \multirow{2}{*}{あっさりしたものと，こってりしたものどちらを食べたいですか}&plain\\
-    &oily\\
-    \multirow{2}{*}{辛いものと酸っぱいものではどちらを食べたいですか}&spicy\\
-    &sour\\\hline
-  \end{tabular}
-\end{center}
-\end{table}
 本実験では，一定時間パーティクルの尤度に大きな変化がない時およびTruck1を通り過ぎた時に質問を提示した．MIoM SCAINによって散策行動情報と人間の発話情報の両方を信念と欲求の推定に活用することが有効であることを評価するために，パーティクルフィルタを用い散策行動情報と人間の発話情報の一方のみを基に信念と欲求を推定するシステムUnimodal Inference of Mind SCAIN (UIoM SCAIN)を定義した．
 
 
@@ -105,12 +111,12 @@ BToMによる信念および欲求の推定を評価するための実験を参�
   d(\mathrm{Chinese})= \sum_{\substack{k}} \frac{7}{3}\cdot L^k_t \cdot rank^k({\mathrm{Chinese}})\\
   \end{split}
 \end{equation}
-ここで，$rank^k(\mathrm{food})$は，パーティクル$k$における欲求$d_k$を基に$\mathrm{food}$をどの程度好むかを3段階で表した値である．式（\ref{b_transform}）および式（\ref{d_transform}）において，尤度が最大のパーティクルのみを用いて信念や欲求を推定することをせずに，全てのパーティクルを考慮して計算を行っているのは，各パーティクルの尤度に差がない場合に対応するためである．推定を行った全タイミングで，信念推定および欲求推定のそれぞれについて，実験参加者による推定結果とMIoM SCAINおよびUIoM SCAINによる推定結果を比較し，相関係数を算出した．UIoM SCAIN (action)およびUIoM SCAIN (utterance)の尤度は，それぞれ式（\ref{uiom_a}），式（\ref{uiom_u}）で計算した．
+ここで，$rank^k(\mathrm{food})$は，パーティクル$k$における欲求$d_k$を基に$\mathrm{food}$をどの程度好むかを3段階で表した値である．式（\ref{b_transform}）および式（\ref{d_transform}）において，尤度が最大のパーティクルのみを用いて信念や欲求を推定せずに，全てのパーティクルを考慮して計算を行っているのは，各パーティクルの尤度に差がない場合に対応するためである．推定を行った全タイミングで，信念推定および欲求推定のそれぞれについて，実験参加者による推定結果とMIoM SCAINおよびUIoM SCAINによる推定結果を比較し，相関係数を算出した．UIoM SCAIN (action)およびUIoM SCAIN (utterance)の尤度は，それぞれ式（\ref{uiom_a}），式（\ref{uiom_u}）で計算した．
 \begin{equation}
   \begin{split}
   \label{uiom_a}
   L^k_t({\mathrm{action}})&= \sum_{b_{t-1}^k,o_t}P(b_t^k|b_{t-1}^k,o_t)\cdot P(o_t|s_t)\cdot P(s_t|s_{t-1},a_{t-1})\\
-  &\hspace{3cm}\cdot P(a_{t-1}|b_{t-1}^k,d^k)\cdot P(b_{t-1}^k,d^k|s_{1:t-1},a_{1:t-2})
+  &\hspace{4cm}\cdot P(a_{t-1}|b_{t-1}^k,d^k)\cdot L^k_{t-1}({\mathrm{action}})\\
   \end{split}
 \end{equation}
 
@@ -118,7 +124,7 @@ BToMによる信念および欲求の推定を評価するための実験を参�
   \begin{split}
   \label{uiom_u}
   L^k_t({\mathrm{utterance}})&= \sum_{b_{t-1}^k,o_t}P(b_t^k|b_{t-1}^k,o_t)\cdot P(o_t|s_t)\cdot P(s_t|s_{t-1},a_{t-1})\\
-  &\hspace{3cm}\cdot P(u_{t-1}|b_{t-1}^k,d^k)\cdot P(b_{t-1}^k,d^k|s_{1:t-1},u_{1:t-2})
+  &\hspace{4cm}\cdot P(u_{t-1}|b_{t-1}^k,d^k)\cdot L^k_{t-1}({\mathrm{utterance}})
   \end{split}
 \end{equation}
 
@@ -151,7 +157,7 @@ BToMによる信念および欲求の推定を評価するための実験を参�
 ここで，MIoM SCAINによる信念と欲求の推定の相関とUIoM SCAINによる信念と欲求の推定の相関との間に差があると言えるかを$z$検定\cite{alma9926301497204034}によって検定した過程を示す．また，表\ref{tab:test}に検定結果を示す．
 
 \par
-まず，MIoM SCAINとUIoM SCAIN (action)の信念推定における相関に差があるかを調べる．以下のように仮説を設定する．
+まず，MIoM SCAINとUIoM SCAIN (action)の信念推定における相関に有意差があるかを調べる．以下のように仮説を設定する．
 \begin{displaymath}
   \begin{split}
   \label{z_a_b_p}
@@ -167,10 +173,10 @@ BToMによる信念および欲求の推定を評価するための実験を参�
   &=4.30\\
   \end{split}
 \end{displaymath}
-$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=4.30>1.96$なので，帰無仮説を棄却する．よって，MIoM SCAINとUIoM SCAIN (action)の信念推定における相関に差があると言える．
+$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=4.30>1.96$なので，帰無仮説を棄却する．よって，MIoM SCAINとUIoM SCAIN (action)の信念推定における相関に有意差があると言える．
 
 \par
-次に，MIoM SCAINとUIoM SCAIN (utterance)の信念推定における相関に差があるかを調べる．以下のように仮説を設定する．
+次に，MIoM SCAINとUIoM SCAIN (utterance)の信念推定における相関に有意差があるかを調べる．以下のように仮説を設定する．
 \begin{displaymath}
   \begin{split}
     \label{z_a_b}
@@ -186,10 +192,10 @@ $\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$で
   &=1.84\\
   \end{split}
 \end{displaymath}
-$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=1.84<1.96$なので，帰無仮説を棄却しない．よって，MIoM SCAINとUIoM SCAIN (utterance)の信念推定における相関に差があるとは言えない．
+$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=1.84<1.96$なので，帰無仮説を棄却しない．よって，MIoM SCAINとUIoM SCAIN (utterance)の信念推定における相関に有意差があるとは言えない．
 
 \par
-次に，MIoM SCAINとUIoM SCAIN (action)の欲求推定における相関に差があるかを調べる．以下のように仮説を設定する．
+次に，MIoM SCAINとUIoM SCAIN (action)の欲求推定における相関に有意差があるかを調べる．以下のように仮説を設定する．
 \begin{displaymath}
   \begin{split}
   \label{z_a_b}
@@ -205,10 +211,10 @@ $\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$で
   &=7.09\\
   \end{split}
 \end{displaymath}
-$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=7.09>1.96$なので，帰無仮説を棄却する．よって，MIoM SCAINとUIoM SCAIN (action)の欲求推定における相関に差があると言える．
+$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=7.09>1.96$なので，帰無仮説を棄却する．よって，MIoM SCAINとUIoM SCAIN (action)の欲求推定における相関に有意差があると言える．
 
 \par
-最後に，MIoM SCAINとUIoM SCAIN (utterance)の欲求推定における相関に差があるかを調べる．以下のように仮説を設定する．
+最後に，MIoM SCAINとUIoM SCAIN (utterance)の欲求推定における相関に有意差があるかを調べる．以下のように仮説を設定する．
 \begin{displaymath}
   \begin{split}
   \label{z_a_b}
@@ -224,7 +230,7 @@ $\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$で
   &=3.26\\
   \end{split}
 \end{displaymath}
-$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=3.26>1.96$なので，帰無仮説を棄却する．よって，MIoM SCAINとUIoM SCAIN (utterance)の欲求推定における相関に差があると言える．
+$\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$であり，$T=3.26>1.96$なので，帰無仮説を棄却する．よって，MIoM SCAINとUIoM SCAIN (utterance)の欲求推定における相関に有意差があると言える．
 
 \begin{table}[htb]
   \begin{center}
@@ -233,8 +239,8 @@ $\alpha=0.05$で両側検定を行う．$z\left(\frac{\alpha}{2}\right)=1.96$で
   \begin{tabular}{lcc} \hline
     &信念&欲求\\\cline{2-3}
     & \hspace{10pt} MIoM SCAIN \hspace{10pt} & \hspace{10pt} MIoM SCAIN \hspace{10pt} \\ \hline
-    UIoM SCAIN (action)&差があると言える&差があると言える\\
-    UIoM SCAIN (utterance)&差があると言えない&差があると言える\\\hline
+    UIoM SCAIN (action)&有意差があると言える&有意差があると言える\\
+    UIoM SCAIN (utterance)&有意差があると言えない&有意差があると言える\\\hline
   \end{tabular}
 \end{center}
 \end{table}
