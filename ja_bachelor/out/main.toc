@@ -1,9 +1,9 @@
 \contentsline {chapter}{\numberline {1}序論}{1}%
 \contentsline {chapter}{\numberline {2}関連研究}{4}%
-\contentsline {section}{\numberline {2.1}行動情報から心的状態を推定する研究}{4}%
-\contentsline {section}{\numberline {2.2}言語情報から心的状態を推定する研究}{6}%
+\contentsline {section}{\numberline {2.1}行動情報から信念と欲求を推定する研究}{4}%
+\contentsline {section}{\numberline {2.2}言語情報から信念や欲求を推定する研究}{6}%
 \contentsline {section}{\numberline {2.3}SCAIN}{7}%
-\contentsline {section}{\numberline {2.4}関連研究における心的状態推定の問題点}{7}%
+\contentsline {section}{\numberline {2.4}関連研究における信念と欲求の推定の問題点}{7}%
 \contentsline {section}{\numberline {2.5}MIoM SCAINと関連研究との相違点}{7}%
 \contentsline {chapter}{\numberline {3}Multimodal Inference of Mind SCAIN}{9}%
 \contentsline {section}{\numberline {3.1}アルゴリズム}{9}%
