@@ -15,7 +15,7 @@
 \contentsline {chapter}{\numberline {5}考察}{22}%
 \contentsline {chapter}{\numberline {6}今後の課題}{24}%
 \contentsline {section}{\numberline {6.1}実世界情報による心的状態の推定}{24}%
-\contentsline {section}{\numberline {6.2}発話情報の検討}{24}%
+\contentsline {section}{\numberline {6.2}人間の発話情報の検討}{24}%
 \contentsline {section}{\numberline {6.3}対話システムの発話生成}{25}%
 \contentsline {chapter}{\numberline {7}結論}{27}%
 \contentsline {chapter}{謝辞}{28}%
