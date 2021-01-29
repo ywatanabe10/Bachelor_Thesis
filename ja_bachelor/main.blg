@@ -37,7 +37,7 @@ Warning--can't use both volume and number fields in baker2011bayesian
 Warning--empty publisher in inbook
 You've used 15 entries,
             3315 wiz_defined-function locations,
-            794 strings with 7894 characters,
+            794 strings with 7896 characters,
 and the built_in function-call counts, 7804 in all, are:
 = -- 663
 > -- 293
